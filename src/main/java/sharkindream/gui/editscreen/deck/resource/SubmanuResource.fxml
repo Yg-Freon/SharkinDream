@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="danzaigame.gui.editscreen.deck.resource.SubmanuResourceController">
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="iconphysical" layoutX="14.0" layoutY="39.0" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="iconmagical" layoutX="75.0" layoutY="39.0" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="iconphysical1" layoutX="14.0" layoutY="100.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: black;" />
+            <AnchorPane fx:id="iconphysical2" layoutX="75.0" layoutY="100.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: black;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

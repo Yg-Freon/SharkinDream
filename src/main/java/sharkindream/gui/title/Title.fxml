@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-size: 100%; -fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.title.TitleController">
+   <children>
+      <TilePane alignment="CENTER" layoutX="7.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" TilePane.alignment="CENTER">
+               <children>
+                  <StackPane disable="true" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="titlelogo" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="450.0" StackPane.alignment="CENTER">
+                           <children>
+                              <Line fx:id="topline" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Line fx:id="bottomline" strokeWidth="1.2" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <Circle fx:id="logodot" disable="true" fill="#383838" opacity="0.0" radius="4.0" stroke="TRANSPARENT" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                           </children>
+                        </AnchorPane>
+                        <TilePane fx:id="creatertext" alignment="CENTER" maxHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="450.0" StackPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="450.0" TilePane.alignment="CENTER">
+                                 <children>
+                                    <Text fill="#383838" layoutX="55.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="-0.2568359375">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#383838" layoutX="195.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="by" AnchorPane.leftAnchor="195.0" AnchorPane.topAnchor="5.39453125">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#383838" layoutX="235.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yg-Freon" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="-0.2568359375">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </TilePane>
+                        <TilePane fx:id="sharkicon" alignment="CENTER" maxWidth="-Infinity" opacity="0.0" prefHeight="50.0" prefWidth="300.0" StackPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" TilePane.alignment="CENTER">
+                                 <children>
+                                    <Text fill="#5b7ccc" layoutX="12.0" layoutY="145.0" scaleX="1.4" scaleY="1.4" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+                                       <font>
+                                          <Font name="System Bold Italic" size="120.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#383838" layoutX="98.0" layoutY="106.0" scaleX="1.4" scaleY="1.4" strokeType="OUTSIDE" strokeWidth="0.0" text="hark" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="86.99609375">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#383838" layoutX="94.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="in" AnchorPane.leftAnchor="92.0" AnchorPane.topAnchor="114.99609375">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#383838" layoutX="101.0" layoutY="165.0" scaleX="1.4" scaleY="1.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Dream" AnchorPane.leftAnchor="103.0" AnchorPane.topAnchor="143.99609375">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </TilePane>
+                        <AnchorPane fx:id="iconlogo" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="145.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="toptheeth" layoutY="-46.0" prefHeight="0.0" prefWidth="0.0" scaleX="0.7" scaleY="0.5" translateY="-90.0" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="-50.0">
+                                 <children>
+                                    <SVGPath fx:id="svg13" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#f09613" rotate="180.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <SVGPath fx:id="svg12" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#150821" layoutX="187.0" rotate="180.0" AnchorPane.leftAnchor="187.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="bottomteeth" prefHeight="0.0" prefWidth="0.0" scaleX="0.7" scaleY="0.5" translateY="95.0" AnchorPane.bottomAnchor="-50.0" AnchorPane.leftAnchor="0.0">
+                                 <children>
+                                    <SVGPath fx:id="svg1" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#ee6557" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+                                    <SVGPath fx:id="svg11" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#5b7ccc" layoutX="186.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="186.0" />
+                                    <SVGPath fx:id="svg111" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#5bcc80" layoutX="373.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="373.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <AnchorPane prefHeight="700.0" prefWidth="1100.0" AnchorPane.rightAnchor="-450.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TilePane alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Circle fx:id="circle0" fill="#f4f4f4" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" translateY="-50.0" TilePane.alignment="CENTER" />
+                           </children>
+                        </TilePane>
+                        <TilePane alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Circle fx:id="circle1" fill="#f4f4f4" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" translateY="20.0" TilePane.alignment="CENTER" />
+                           </children>
+                        </TilePane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="startgame" disable="true" onMouseClicked="#onClickStart" opacity="0.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.topAnchor="500.0">
+                     <children>
+                        <Text disable="true" fill="#383838" layoutX="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start" AnchorPane.bottomAnchor="0.0">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </TilePane>
+   </children>
+</AnchorPane>

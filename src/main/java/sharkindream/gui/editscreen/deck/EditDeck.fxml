@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-size: 100%; -fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="danzaigame.gui.editscreen.deck.EditDeckController">
+   <children>
+      <AnchorPane layoutX="121.0" layoutY="300.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+         <children>
+            <AnchorPane fx:id="card0" layoutX="-25.0" layoutY="10.0" onMouseClicked="#onMouseClockCard" prefHeight="300.0" prefWidth="250.0" scaleX="0.5" scaleY="0.5" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" style="-fx-shape: d=&quot;M 240.61 452.26 C 247.97 451.52 255.50 452.05 262.89 452.09 C 259.07 458.28 255.19 464.43 251.55 470.74 C 248.00 464.54 243.73 458.68 240.61 452.26 Z&quot; fill=&quot;#ffffff&quot;;" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label text="A" textFill="#ee6557" wrapText="true">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                        <Arc fill="#ee6557" length="270.0" radiusX="15.0" radiusY="15.0" startAngle="45.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="34.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="180.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="15.0">
+                     <children>
+                        <Label text="A" textFill="#ee6557" wrapText="true">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                        <Arc fill="#ee6557" length="270.0" radiusX="15.0" radiusY="15.0" startAngle="45.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                     </children>
+                  </AnchorPane>
+                  <TilePane alignment="CENTER" layoutX="25.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="A" textFill="#ed6458" wrapText="true">
+                           <font>
+                              <Font size="100.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </TilePane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="card1" layoutX="101.0" layoutY="10.0" onMouseClicked="#onMouseClockCard" prefHeight="300.0" prefWidth="250.0" scaleX="0.5" scaleY="0.5" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label text="A" textFill="#ee6557" wrapText="true">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                        <Arc fill="#ee6557" length="270.0" radiusX="15.0" radiusY="15.0" startAngle="45.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="34.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="180.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="15.0">
+                     <children>
+                        <Label text="A" textFill="#ee6557" wrapText="true">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                        <Arc fill="#ee6557" length="270.0" radiusX="15.0" radiusY="15.0" startAngle="45.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                     </children>
+                  </AnchorPane>
+                  <TilePane alignment="CENTER" layoutX="25.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="A" textFill="#ed6458" wrapText="true">
+                           <font>
+                              <Font size="100.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </TilePane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="card2" layoutX="227.0" layoutY="10.0" onMouseClicked="#onMouseClockCard" prefHeight="300.0" prefWidth="250.0" scaleX="0.5" scaleY="0.5" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label text="A" textFill="#ee6557" wrapText="true">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                        <Arc fill="#ee6557" length="270.0" radiusX="15.0" radiusY="15.0" startAngle="45.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="34.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="180.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="15.0">
+                     <children>
+                        <Label text="A" textFill="#ee6557" wrapText="true">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                        <Arc fill="#ee6557" length="270.0" radiusX="15.0" radiusY="15.0" startAngle="45.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                     </children>
+                  </AnchorPane>
+                  <TilePane alignment="CENTER" layoutX="25.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="A" textFill="#ed6458" wrapText="true">
+                           <font>
+                              <Font size="100.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </TilePane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="card3" layoutX="353.0" layoutY="10.0" onMouseClicked="#onMouseClockCard" prefHeight="300.0" prefWidth="250.0" scaleX="0.5" scaleY="0.5" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label text="A" textFill="#ee6557" wrapText="true">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                        <Arc fill="#ee6557" length="270.0" radiusX="15.0" radiusY="15.0" startAngle="45.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="34.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="180.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="15.0">
+                     <children>
+                        <Label text="A" textFill="#ee6557" wrapText="true">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                        <Arc fill="#ee6557" length="270.0" radiusX="15.0" radiusY="15.0" startAngle="45.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                     </children>
+                  </AnchorPane>
+                  <TilePane alignment="CENTER" layoutX="25.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="A" textFill="#ed6458" wrapText="true">
+                           <font>
+                              <Font size="100.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </TilePane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="-200.0">
+               <children>
+                  <Line endX="100.0" layoutX="100.0" startX="-100.0" AnchorPane.topAnchor="20.0" />
+                  <Text fill="#2b2b2b" strokeType="OUTSIDE" strokeWidth="0.0" text="Setting:" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Line endX="100.0" layoutX="100.0" layoutY="239.0" startX="-100.0" />
+                  <AnchorPane layoutY="41.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" AnchorPane.leftAnchor="5.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="typetext" onMouseClicked="#onMouseClickSetting" strokeType="OUTSIDE" strokeWidth="0.0" text="Fire" textAlignment="RIGHT" wrappingWidth="100.0000074505806" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="73.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Resource:" AnchorPane.leftAnchor="5.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="resourcetext" onMouseClicked="#onMouseClickSetting" strokeType="OUTSIDE" strokeWidth="0.0" text="Magic" textAlignment="RIGHT" wrappingWidth="100.0000074505806" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="109.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Power:" AnchorPane.leftAnchor="5.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="powertext" onMouseClicked="#onMouseClickSetting" strokeType="OUTSIDE" strokeWidth="0.0" text="A/100" textAlignment="RIGHT" wrappingWidth="100.0000074505806" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="147.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Buff:" AnchorPane.leftAnchor="5.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="bufftext" onMouseClicked="#onMouseClickSetting" strokeType="OUTSIDE" strokeWidth="0.0" text="0/0/0/1" textAlignment="RIGHT" wrappingWidth="100.0000074505806" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="187.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Target:" AnchorPane.leftAnchor="5.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="targettext" onMouseClicked="#onMouseClickSetting" strokeType="OUTSIDE" strokeWidth="0.0" text="ENEMY" textAlignment="RIGHT" wrappingWidth="100.0000074505806" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="226.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Accuracy/Luck:" AnchorPane.leftAnchor="5.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="accuracylucktext" onMouseClicked="#onMouseClickSetting" strokeType="OUTSIDE" strokeWidth="0.0" text="80/5" textAlignment="RIGHT" wrappingWidth="100.0000074505806" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="260.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cost:" AnchorPane.leftAnchor="5.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="costtext" strokeType="OUTSIDE" strokeWidth="0.0" text="50" textAlignment="RIGHT" wrappingWidth="100.0000074505806" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="submanu" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="-180.0">
+               <children>
+                  <Line AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Line AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Text fill="#2b2b2b" layoutX="370.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deck : 1">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

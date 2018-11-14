@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.gamescreen.infomation.lobby.selectdeck.SelectDeckController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Region maxHeight="-Infinity" minHeight="-Infinity" prefHeight="120.0" prefWidth="200.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TilePane alignment="CENTER" maxHeight="-Infinity" prefHeight="50.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Text fill="#252525" strokeType="OUTSIDE" strokeWidth="0.0" text="デッキを選択してください" textAlignment="CENTER" TilePane.alignment="CENTER">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </TilePane>
+                        <HBox prefHeight="100.0" prefWidth="500.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane maxWidth="-Infinity" onMouseClicked="#onClickPrevious" prefHeight="200.0" prefWidth="70.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <TilePane alignment="CENTER" disable="true" layoutY="39.0" maxHeight="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                                       <children>
+                                          <SVGPath content="M 59.67 24.02 C 61.12 29.40 60.83 33.56 58.88 38.74 C 53.38 53.40 48.36 68.22 42.82 82.86 C 40.86 88.30 38.88 93.11 41.03 98.87 C 45.24 110.94 49.79 122.92 54.01 135.00 C 57.25 145.01 62.53 152.74 59.81 163.66 C 57.96 160.18 56.38 156.62 55.06 152.91 C 49.03 136.00 43.13 118.93 36.80 102.14 C 35.59 98.57 34.17 94.77 35.02 90.96 C 35.96 86.41 37.94 81.96 39.52 77.59 C 44.09 65.09 48.54 52.54 52.95 39.98 C 54.88 34.49 56.68 29.06 59.67 24.02 Z" fill="#110f28" />
+                                       </children>
+                                    </TilePane>
+                                    <TilePane alignment="CENTER" disable="true" layoutX="25.0" layoutY="39.0" maxHeight="-Infinity" prefHeight="50.0" prefWidth="50.0" AnchorPane.topAnchor="39.0">
+                                       <children>
+                                          <SVGPath content="M 59.67 24.02 C 61.12 29.40 60.83 33.56 58.88 38.74 C 53.38 53.40 48.36 68.22 42.82 82.86 C 40.86 88.30 38.88 93.11 41.03 98.87 C 45.24 110.94 49.79 122.92 54.01 135.00 C 57.25 145.01 62.53 152.74 59.81 163.66 C 57.96 160.18 56.38 156.62 55.06 152.91 C 49.03 136.00 43.13 118.93 36.80 102.14 C 35.59 98.57 34.17 94.77 35.02 90.96 C 35.96 86.41 37.94 81.96 39.52 77.59 C 44.09 65.09 48.54 52.54 52.95 39.98 C 54.88 34.49 56.68 29.06 59.67 24.02 Z" fill="#110f28" />
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                              <VBox prefHeight="200.0" prefWidth="500.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TilePane alignment="CENTER" maxHeight="-Infinity" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text fx:id="subtitle" fill="#252525" strokeType="OUTSIDE" strokeWidth="0.0" text="Deck No.">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </TilePane>
+                                    <AnchorPane maxWidth="400.0" prefHeight="200.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                              <AnchorPane maxWidth="-Infinity" onMouseClicked="#onClickNext" prefHeight="200.0" prefWidth="70.0" scaleX="-1.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <TilePane alignment="CENTER" disable="true" layoutY="39.0" maxHeight="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                                       <children>
+                                          <SVGPath content="M 59.67 24.02 C 61.12 29.40 60.83 33.56 58.88 38.74 C 53.38 53.40 48.36 68.22 42.82 82.86 C 40.86 88.30 38.88 93.11 41.03 98.87 C 45.24 110.94 49.79 122.92 54.01 135.00 C 57.25 145.01 62.53 152.74 59.81 163.66 C 57.96 160.18 56.38 156.62 55.06 152.91 C 49.03 136.00 43.13 118.93 36.80 102.14 C 35.59 98.57 34.17 94.77 35.02 90.96 C 35.96 86.41 37.94 81.96 39.52 77.59 C 44.09 65.09 48.54 52.54 52.95 39.98 C 54.88 34.49 56.68 29.06 59.67 24.02 Z" fill="#110f28" />
+                                       </children>
+                                    </TilePane>
+                                    <TilePane alignment="CENTER" disable="true" layoutX="25.0" layoutY="39.0" maxHeight="-Infinity" prefHeight="50.0" prefWidth="50.0" AnchorPane.topAnchor="39.0">
+                                       <children>
+                                          <SVGPath content="M 59.67 24.02 C 61.12 29.40 60.83 33.56 58.88 38.74 C 53.38 53.40 48.36 68.22 42.82 82.86 C 40.86 88.30 38.88 93.11 41.03 98.87 C 45.24 110.94 49.79 122.92 54.01 135.00 C 57.25 145.01 62.53 152.74 59.81 163.66 C 57.96 160.18 56.38 156.62 55.06 152.91 C 49.03 136.00 43.13 118.93 36.80 102.14 C 35.59 98.57 34.17 94.77 35.02 90.96 C 35.96 86.41 37.94 81.96 39.52 77.59 C 44.09 65.09 48.54 52.54 52.95 39.98 C 54.88 34.49 56.68 29.06 59.67 24.02 Z" fill="#110f28" />
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane maxWidth="-Infinity" onMouseClicked="#returnpage" prefHeight="50.0" prefWidth="30.0">
+                                 <children>
+                                    <Line disable="true" endX="176.0" startX="62.0" AnchorPane.bottomAnchor="0.0" />
+                                    <Line disable="true" endX="67.0" endY="5.0" layoutX="-4.0" layoutY="-6.0" startX="96.0" startY="-14.0" AnchorPane.bottomAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="500.0" prefWidth="350.0" HBox.hgrow="ALWAYS" />
+                              <AnchorPane maxWidth="-Infinity" onMouseClicked="#goreadypage" prefHeight="50.0" prefWidth="30.0" scaleX="-1.0">
+                                 <children>
+                                    <Line disable="true" endX="176.0" startX="62.0" AnchorPane.bottomAnchor="0.0" />
+                                    <Line disable="true" endX="67.0" endY="5.0" layoutX="-4.0" layoutY="-6.0" startX="96.0" startY="-14.0" AnchorPane.bottomAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="60.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

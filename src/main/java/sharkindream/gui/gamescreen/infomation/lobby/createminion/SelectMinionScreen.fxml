@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.gamescreen.infomation.lobby.createminion.SelectMinionScreenController">
+   <children>
+      <AnchorPane layoutX="280.0" layoutY="260.0" prefHeight="200.0" prefWidth="200.0" scaleX="0.5" scaleY="0.5" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="240.0">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="-69.0" AnchorPane.topAnchor="-122.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#ee6557" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" AnchorPane.leftAnchor="13.79642391204834" AnchorPane.topAnchor="20.0" />
+                  <Text disable="true" fill="WHITE" layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HP">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="-122.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#5b7ccc" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="17.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MP">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="-139.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#cc5cc0" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Str">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#5bcc80" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Int">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="-70.0" AnchorPane.topAnchor="122.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#150821" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vit">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="122.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#f09613" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="8.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+               <children>
+                  <SVGPath fx:id="center12" content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="WHITE" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <SVGPath content="M 684.26 43.15 C 688.09 44.07 691.73 46.08 695.40 47.56 C 705.72 51.71 715.74 56.55 725.96 60.97 C 732.77 64.09 739.77 66.53 746.44 69.93 C 744.50 73.88 743.04 77.68 739.89 80.88 C 733.42 87.53 727.13 94.21 721.92 101.93 C 711.28 118.14 703.06 135.04 694.19 152.20 C 690.09 160.74 685.55 169.04 681.65 177.69 C 677.24 185.48 674.08 193.85 669.68 201.64 C 665.56 209.30 662.53 217.64 658.30 225.30 C 654.22 232.66 651.15 240.76 647.19 248.14 C 643.13 255.48 639.88 263.29 636.29 270.87 C 646.62 277.12 657.32 282.99 668.52 287.54 C 682.78 294.09 697.11 299.85 712.38 303.67 C 726.86 307.93 741.49 311.54 756.22 314.85 C 771.54 318.61 787.18 320.62 802.52 324.37 C 804.29 324.91 805.98 325.86 807.64 326.67 C 804.54 336.71 801.32 346.70 798.32 356.77 C 808.14 361.84 817.80 367.22 827.55 372.42 C 829.22 373.29 830.39 374.62 831.72 375.90 C 825.83 375.14 820.78 372.81 815.25 370.83 C 808.88 368.58 802.61 366.28 796.07 364.53 C 792.68 374.17 790.06 384.04 786.84 393.74 C 771.42 443.49 755.89 493.20 739.76 542.73 C 734.87 557.77 729.62 572.69 724.75 587.74 C 720.60 599.86 716.18 611.89 711.94 623.98 C 698.13 661.65 683.39 700.04 664.47 735.46 C 652.30 759.20 637.39 781.72 619.79 801.79 C 613.02 809.94 604.92 816.91 597.51 824.50 C 589.74 831.06 582.03 837.77 573.93 843.93 C 564.19 850.88 554.36 857.76 544.43 864.43 C 533.20 871.21 522.47 878.74 510.99 885.05 C 508.96 886.25 507.00 887.54 505.04 888.84 C 501.29 886.22 497.44 883.77 493.42 881.57 C 484.12 876.45 475.39 870.16 466.37 864.63 C 458.17 859.83 451.15 854.10 443.28 848.75 C 434.86 843.17 427.17 836.04 419.18 829.76 C 413.40 825.19 408.58 819.76 403.17 814.81 C 395.85 808.11 389.54 799.89 382.69 792.52 C 378.20 798.69 375.16 805.60 371.17 812.19 C 361.78 828.20 352.81 844.47 343.60 860.59 C 341.42 864.22 340.60 867.87 337.15 870.57 C 338.12 866.64 339.83 863.07 341.25 859.29 C 350.11 835.11 359.15 811.07 368.04 786.92 C 369.09 783.87 370.97 780.43 370.91 777.18 C 369.73 774.04 367.39 771.25 365.55 768.45 C 355.67 754.06 347.35 737.98 339.49 722.52 C 319.85 682.75 304.37 640.18 289.64 598.37 C 284.99 585.81 281.44 572.94 276.44 560.50 C 267.52 534.22 259.19 507.71 250.75 481.28 C 235.74 433.83 221.03 386.27 206.33 338.72 C 204.92 334.56 203.65 330.38 202.75 326.08 C 215.42 321.70 229.25 320.32 242.32 317.46 C 261.96 313.04 281.58 308.72 300.89 302.94 C 316.03 299.04 330.32 293.02 344.49 286.50 C 357.50 281.36 369.29 273.52 381.89 266.88 C 390.34 262.14 398.34 256.61 406.66 251.65 C 415.13 246.69 423.14 240.70 431.49 235.51 C 440.05 230.43 448.21 224.64 456.37 218.93 C 450.11 215.28 443.48 212.38 437.12 208.90 C 424.12 201.75 410.82 195.20 397.67 188.33 C 395.40 187.15 393.42 185.57 391.54 183.84 C 395.23 184.35 398.80 185.30 402.32 186.49 C 413.71 190.28 425.00 194.20 436.08 198.84 C 444.70 201.96 453.21 205.27 461.23 209.76 C 463.13 210.56 466.25 212.72 468.19 211.22 C 472.77 208.63 476.81 205.11 481.28 202.33 C 489.46 197.28 497.33 191.71 505.04 185.97 C 512.20 191.26 519.46 196.31 527.04 200.97 C 535.32 206.76 543.54 212.56 552.15 217.85 C 562.62 225.18 573.31 232.15 584.21 238.81 C 591.08 243.05 597.42 248.04 604.46 251.92 C 607.10 245.99 609.99 240.28 612.31 234.25 C 615.46 225.96 619.79 218.25 622.97 209.97 C 626.31 201.18 631.04 193.02 634.31 184.23 C 636.56 178.37 639.60 172.84 641.93 166.98 C 644.87 159.08 648.88 151.66 651.80 143.74 C 657.05 132.42 661.48 120.77 666.26 109.24 C 671.36 95.58 676.60 82.92 678.65 68.36 C 680.31 59.26 678.99 51.31 684.26 43.15 Z" scaleX="0.13" scaleY="0.13" AnchorPane.leftAnchor="-260.0" AnchorPane.topAnchor="-370.0" />
+               </children>
+            </AnchorPane>
+            <Circle fill="#ffffff00" layoutX="10.0" layoutY="10.0" onMouseClicked="#onMouseClickedSelect" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.5" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="-300.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="270.0" layoutY="250.0" prefHeight="200.0" prefWidth="200.0" scaleX="0.5" scaleY="0.5" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="240.0">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="-69.0" AnchorPane.topAnchor="-122.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#ee6557" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" AnchorPane.leftAnchor="13.79642391204834" AnchorPane.topAnchor="20.0" />
+                  <Text disable="true" fill="WHITE" layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HP">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="-122.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#5b7ccc" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="17.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MP">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="-139.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#cc5cc0" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Str">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#5bcc80" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Int">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="-70.0" AnchorPane.topAnchor="122.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#150821" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vit">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="122.0">
+               <children>
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#f09613" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <Text disable="true" fill="WHITE" layoutX="8.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+               <children>
+                  <SVGPath fx:id="center1" content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="WHITE" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <SVGPath content="M 684.26 43.15 C 688.09 44.07 691.73 46.08 695.40 47.56 C 705.72 51.71 715.74 56.55 725.96 60.97 C 732.77 64.09 739.77 66.53 746.44 69.93 C 744.50 73.88 743.04 77.68 739.89 80.88 C 733.42 87.53 727.13 94.21 721.92 101.93 C 711.28 118.14 703.06 135.04 694.19 152.20 C 690.09 160.74 685.55 169.04 681.65 177.69 C 677.24 185.48 674.08 193.85 669.68 201.64 C 665.56 209.30 662.53 217.64 658.30 225.30 C 654.22 232.66 651.15 240.76 647.19 248.14 C 643.13 255.48 639.88 263.29 636.29 270.87 C 646.62 277.12 657.32 282.99 668.52 287.54 C 682.78 294.09 697.11 299.85 712.38 303.67 C 726.86 307.93 741.49 311.54 756.22 314.85 C 771.54 318.61 787.18 320.62 802.52 324.37 C 804.29 324.91 805.98 325.86 807.64 326.67 C 804.54 336.71 801.32 346.70 798.32 356.77 C 808.14 361.84 817.80 367.22 827.55 372.42 C 829.22 373.29 830.39 374.62 831.72 375.90 C 825.83 375.14 820.78 372.81 815.25 370.83 C 808.88 368.58 802.61 366.28 796.07 364.53 C 792.68 374.17 790.06 384.04 786.84 393.74 C 771.42 443.49 755.89 493.20 739.76 542.73 C 734.87 557.77 729.62 572.69 724.75 587.74 C 720.60 599.86 716.18 611.89 711.94 623.98 C 698.13 661.65 683.39 700.04 664.47 735.46 C 652.30 759.20 637.39 781.72 619.79 801.79 C 613.02 809.94 604.92 816.91 597.51 824.50 C 589.74 831.06 582.03 837.77 573.93 843.93 C 564.19 850.88 554.36 857.76 544.43 864.43 C 533.20 871.21 522.47 878.74 510.99 885.05 C 508.96 886.25 507.00 887.54 505.04 888.84 C 501.29 886.22 497.44 883.77 493.42 881.57 C 484.12 876.45 475.39 870.16 466.37 864.63 C 458.17 859.83 451.15 854.10 443.28 848.75 C 434.86 843.17 427.17 836.04 419.18 829.76 C 413.40 825.19 408.58 819.76 403.17 814.81 C 395.85 808.11 389.54 799.89 382.69 792.52 C 378.20 798.69 375.16 805.60 371.17 812.19 C 361.78 828.20 352.81 844.47 343.60 860.59 C 341.42 864.22 340.60 867.87 337.15 870.57 C 338.12 866.64 339.83 863.07 341.25 859.29 C 350.11 835.11 359.15 811.07 368.04 786.92 C 369.09 783.87 370.97 780.43 370.91 777.18 C 369.73 774.04 367.39 771.25 365.55 768.45 C 355.67 754.06 347.35 737.98 339.49 722.52 C 319.85 682.75 304.37 640.18 289.64 598.37 C 284.99 585.81 281.44 572.94 276.44 560.50 C 267.52 534.22 259.19 507.71 250.75 481.28 C 235.74 433.83 221.03 386.27 206.33 338.72 C 204.92 334.56 203.65 330.38 202.75 326.08 C 215.42 321.70 229.25 320.32 242.32 317.46 C 261.96 313.04 281.58 308.72 300.89 302.94 C 316.03 299.04 330.32 293.02 344.49 286.50 C 357.50 281.36 369.29 273.52 381.89 266.88 C 390.34 262.14 398.34 256.61 406.66 251.65 C 415.13 246.69 423.14 240.70 431.49 235.51 C 440.05 230.43 448.21 224.64 456.37 218.93 C 450.11 215.28 443.48 212.38 437.12 208.90 C 424.12 201.75 410.82 195.20 397.67 188.33 C 395.40 187.15 393.42 185.57 391.54 183.84 C 395.23 184.35 398.80 185.30 402.32 186.49 C 413.71 190.28 425.00 194.20 436.08 198.84 C 444.70 201.96 453.21 205.27 461.23 209.76 C 463.13 210.56 466.25 212.72 468.19 211.22 C 472.77 208.63 476.81 205.11 481.28 202.33 C 489.46 197.28 497.33 191.71 505.04 185.97 C 512.20 191.26 519.46 196.31 527.04 200.97 C 535.32 206.76 543.54 212.56 552.15 217.85 C 562.62 225.18 573.31 232.15 584.21 238.81 C 591.08 243.05 597.42 248.04 604.46 251.92 C 607.10 245.99 609.99 240.28 612.31 234.25 C 615.46 225.96 619.79 218.25 622.97 209.97 C 626.31 201.18 631.04 193.02 634.31 184.23 C 636.56 178.37 639.60 172.84 641.93 166.98 C 644.87 159.08 648.88 151.66 651.80 143.74 C 657.05 132.42 661.48 120.77 666.26 109.24 C 671.36 95.58 676.60 82.92 678.65 68.36 C 680.31 59.26 678.99 51.31 684.26 43.15 Z" scaleX="0.13" scaleY="0.13" AnchorPane.leftAnchor="-260.0" AnchorPane.topAnchor="-370.0" />
+               </children>
+            </AnchorPane>
+            <Circle fill="#ffffff00" layoutX="10.0" layoutY="10.0" onMouseClicked="#onMouseClickedSelect" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.5" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="-300.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane maxWidth="-Infinity" onMouseClicked="#returnpage" prefHeight="50.0" prefWidth="30.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Line disable="true" endX="176.0" startX="62.0" AnchorPane.bottomAnchor="0.0" />
+            <Line disable="true" endX="67.0" endY="5.0" layoutX="-4.0" layoutY="-6.0" startX="96.0" startY="-14.0" AnchorPane.bottomAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" onMouseClicked="#gonextpage" prefHeight="50.0" prefWidth="30.0" scaleX="-1.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="470.0">
+         <children>
+            <Line disable="true" endX="176.0" startX="62.0" AnchorPane.bottomAnchor="0.0" />
+            <Line disable="true" endX="67.0" endY="5.0" layoutX="-4.0" layoutY="-6.0" startX="96.0" startY="-14.0" AnchorPane.bottomAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

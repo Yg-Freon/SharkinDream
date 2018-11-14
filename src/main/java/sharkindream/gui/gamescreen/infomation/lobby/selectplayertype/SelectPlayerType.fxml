@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="287.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.gamescreen.infomation.lobby.selectplayertype.SelectPlayerTypeController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text layoutX="111.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="属性を選択してください" textAlignment="CENTER" AnchorPane.leftAnchor="111.0" AnchorPane.topAnchor="-20.0">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Text>
+                        <SVGPath fx:id="svg" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#ee6557" layoutX="-4.0" layoutY="21.0" onMouseClicked="#onClickFire" scaleX="0.7" scaleY="0.5" />
+                        <SVGPath fx:id="svg1" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#5b7ccc" layoutX="127.0" layoutY="21.0" onMouseClicked="#onClickWater" scaleX="0.7" scaleY="0.5" />
+                        <SVGPath fx:id="svg11" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#5bcc80" layoutX="258.0" layoutY="21.0" onMouseClicked="#onClickLeaf" scaleX="0.7" scaleY="0.5" />
+                        <SVGPath fx:id="svg12" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#150821" layoutX="193.0" layoutY="-40.0" onMouseClicked="#onClickDark" rotate="180.0" scaleX="0.7" scaleY="0.5" />
+                        <SVGPath fx:id="svg13" content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#f09613" layoutX="61.0" layoutY="-40.0" onMouseClicked="#onClickLight" rotate="180.0" scaleX="0.7" scaleY="0.5" />
+                        <Text disable="true" fill="WHITE" layoutX="123.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Light">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <Text disable="true" fill="WHITE" layoutX="257.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dark">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <Text disable="true" fill="WHITE" layoutX="67.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fire">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <Text disable="true" fill="WHITE" layoutX="326.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leaf">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <Text disable="true" fill="WHITE" layoutX="185.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Water">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

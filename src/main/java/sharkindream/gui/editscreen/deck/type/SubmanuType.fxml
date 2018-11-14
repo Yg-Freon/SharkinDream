@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="danzaigame.gui.editscreen.deck.type.SubmanuTypeController">
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SVGPath content="m100.749996,198.999999l28.71429,-60.000002l76.571435,0l28.714281,60.000002l-28.714281,60.000002l-76.571435,0l-28.71429,-60.000002z" fill="#ee6557" layoutX="-105.0" layoutY="-143.0" onMouseClicked="#onClickFire" scaleX="0.5" scaleY="0.5" />
+            <SVGPath content="m100.749996,198.999999l28.71429,-60.000002l76.571435,0l28.714281,60.000002l-28.714281,60.000002l-76.571435,0l-28.71429,-60.000002z" fill="#5b7ccc" layoutX="-105.0" layoutY="-82.0" onMouseClicked="#onClickWater" scaleX="0.5" scaleY="0.5" />
+            <SVGPath content="m100.749996,198.999999l28.71429,-60.000002l76.571435,0l28.714281,60.000002l-28.714281,60.000002l-76.571435,0l-28.71429,-60.000002z" fill="#5bcc80" layoutX="-105.0" layoutY="-21.0" onMouseClicked="#onClickLeaf" scaleX="0.5" scaleY="0.5" />
+            <SVGPath content="m100.749996,198.999999l28.71429,-60.000002l76.571435,0l28.714281,60.000002l-28.714281,60.000002l-76.571435,0l-28.71429,-60.000002z" fill="#f09613" layoutX="-51.0" layoutY="-112.0" onMouseClicked="#onClickLight" scaleX="0.5" scaleY="0.5" />
+            <SVGPath content="m100.749996,198.999999l28.71429,-60.000002l76.571435,0l28.714281,60.000002l-28.714281,60.000002l-76.571435,0l-28.71429,-60.000002z" fill="#150821" layoutX="-51.0" layoutY="-51.0" onMouseClicked="#onClickDark" scaleX="0.5" scaleY="0.5" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
