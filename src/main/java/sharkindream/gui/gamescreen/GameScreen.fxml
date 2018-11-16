@@ -2,451 +2,271 @@
 
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-size: 100%;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.gamescreen.New2GameScreenController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.gamescreen.GameScreenController">
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <bottom>
-            <HBox minHeight="-Infinity" prefHeight="150.0" prefWidth="680.0" style="-fx-background-color: #16A6B6;" BorderPane.alignment="CENTER" />
-         </bottom>
-         <center>
-            <AnchorPane minHeight="-Infinity" prefHeight="150.0" prefWidth="430.0" BorderPane.alignment="CENTER_LEFT" />
-         </center>
-         <right>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="150.0" prefWidth="200.0" style="-fx-view-order: 2;" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" scaleX="1.4" scaleY="1.4" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="-140.0">
+                  <Line endX="1100.0" stroke="#383838" strokeWidth="1.2" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+         </bottom>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-view-order: 2;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="infoscreen" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="animationpane" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.rightAnchor="50.0">
                      <children>
-                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Circle fill="#1f93ff00" radius="450.0" scaleX="-1.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                        <AnchorPane fx:id="playerboxaxis" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                            <children>
                               <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" translateX="-370.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-24.1" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-32.72">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname1" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername1" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-48.0">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-65.44">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname2" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername2" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-72.3">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-98.16">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname3" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername3" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-96.5">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-130.88">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname4" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername4" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-120.6">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-163.6">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname5" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername5" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-144.7">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="163.6">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname11" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername11" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-168.8">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="130.88">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname12" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername12" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="167.1">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="98.16">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname13" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername13" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="142.8">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="65.44">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname14" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername14" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="120.6">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="32.72">
                                  <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname10" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername10" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
+                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
+                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                                          <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" x="52.0" y="20.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="96.5">
-                                 <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname9" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername9" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="72.3">
-                                 <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname8" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername8" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="48.0">
-                                 <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname7" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername7" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="24.1">
-                                 <children>
-                                    <SVGPath content="M 0,0 L -88,18 a 90 90 168.75 0 1 0,-36 z" fill="#dddddd" layoutX="444.0" layoutY="100.0" scaleX="3.8" scaleY="3.8" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Circle disable="true" fill="WHITE" layoutX="102.0" layoutY="100.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="-20.0" />
-                                    <Text fx:id="firtstname6" disable="true" layoutX="86.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="-8.0">
-                                       <font>
-                                          <Font size="44.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="othername6" disable="true" fill="WHITE" layoutX="143.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ame" translateX="-125.0" translateY="-20.0" wrappingWidth="204.12109375" AnchorPane.rightAnchor="-70.0" AnchorPane.topAnchor="25.0">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text disable="true" fill="WHITE" layoutX="194.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
-                                       <font>
-                                          <Font size="40.0" />
-                                       </font>
-                                    </Text>
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="GREY" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="-52.0" />
-                                    <Line disable="true" endX="70.0" endY="15.0" layoutX="160.0" layoutY="50.0" startX="-90.0" startY="-20.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="-53.0" />
-                                    <Line disable="true" endX="160.0" endY="-34.0" layoutX="67.0" layoutY="169.0" startX="-0.7071075439453125" startY="-0.7396240234375" stroke="#808080" strokeWidth="3.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="52.0" />
-                                    <Line disable="true" endX="70.0" endY="83.0" layoutX="160.0" layoutY="50.0" startX="-92.0" startY="117.0" stroke="WHITE" strokeWidth="6.0" translateX="-125.0" translateY="-20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="39.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="-62.0" />
-                                    <AnchorPane layoutX="64.0" layoutY="135.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="30.0" />
-                                 </children>
-                              </AnchorPane>
-                           </children></AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="-140.0">
-                     <children>
-                        <SVGPath content="M 91.38 8.45 C 108.30 6.49 126.10 10.20 141.36 17.62 C 166.43 29.91 185.05 53.75 190.90 81.05 C 194.42 96.30 193.52 112.16 189.14 127.12 C 182.83 147.68 169.49 165.66 151.63 177.63 C 134.76 188.40 115.10 194.30 95.00 192.91 C 71.34 191.34 48.10 180.48 32.25 162.75 C 16.42 145.54 7.73 122.32 7.92 98.98 C 8.76 75.92 17.56 53.36 33.70 36.71 C 48.91 20.63 69.44 10.90 91.38 8.45 Z" fill="WHITE" onScroll="#onScroll" scaleX="1.4" scaleY="1.4" AnchorPane.rightAnchor="-90.0" AnchorPane.topAnchor="-90.0" />
-                        <SVGPath content="M 12.39 11.29 C 21.06 15.59 27.47 24.73 34.83 31.16 C 47.11 41.76 57.76 53.81 69.61 64.91 C 82.47 52.00 95.39 39.16 108.23 26.23 C 113.91 20.64 118.35 14.96 125.61 11.29 C 124.01 19.11 118.60 23.00 113.29 28.29 C 98.46 42.53 84.55 57.83 69.28 71.59 C 59.26 62.23 50.24 52.02 39.88 43.11 C 32.80 36.53 26.12 29.53 19.14 22.85 C 15.44 19.27 13.68 16.35 12.39 11.29 Z" disable="true" scaleX="0.6" scaleY="0.6" AnchorPane.rightAnchor="-55.61000156402588" AnchorPane.topAnchor="-47.71000003814697" />
-                        <Text disable="true" layoutX="81.0" layoutY="6.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scroll" AnchorPane.rightAnchor="-29.0" AnchorPane.topAnchor="30.0">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                           <children>
+                              <Circle fill="#f4f4f4" onScroll="#onScroll" radius="130.0" stroke="#36363600" strokeType="INSIDE" strokeWidth="1.2" />
+                              <SVGPath content="M 35 0 L 0 35 L -35 0 " disable="true" fill="TRANSPARENT" layoutY="-21.0" stroke="#383838" strokeWidth="2.0" />
+                              <Text disable="true" fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="Scroll" x="-33.0" y="50.0">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
                      </children>
                   </AnchorPane>
                </children>
             </AnchorPane>
-         </right>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>

@@ -52,7 +52,7 @@ public class Guest implements Serializable{
 		if(this.type != ((Guest)obj).type){
 			return false;
 		}
-		if(this.deck.deckID != ((Guest)obj).deck.deckID){
+		if(this.deck.getDeckID() != ((Guest)obj).deck.getDeckID()){
 			return false;
 		}
 

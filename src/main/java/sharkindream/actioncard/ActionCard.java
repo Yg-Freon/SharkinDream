@@ -2,16 +2,29 @@ package sharkindream.actioncard;
 
 import java.io.Serializable;
 
+import javafx.scene.canvas.Canvas;
+import sharkindream.actioncard.resource.Magical;
+import sharkindream.actioncard.resource.Physical;
 import sharkindream.gamecharacter.StatusAilmen;
 import sharkindream.gamecharacter.Type;
 
 public class ActionCard implements Serializable{
 
 	public enum Resource{
-		Physical,
-		Magical,
-		Debuff,
-		Heal
+		Physical( (new Physical()).geticon() ),
+		Magical( (new Magical()).geticon() ),
+		Debuff((new Magical()).geticon()),
+		Heal((new Magical()).geticon());
+
+		private Canvas icon;
+		private Resource(Canvas icon_) {
+			this.icon = icon_;
+		}
+
+		public Canvas getIcon() {
+			System.out.println(this.icon);
+			return this.icon;
+		}
 	}
 	public enum Power{
 		O(0, 10, "0"),

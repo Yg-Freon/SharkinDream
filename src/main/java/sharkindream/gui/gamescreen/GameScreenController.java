@@ -22,6 +22,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.SVGPath;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
+import sharkindream.gui.event.OnMoveScreenHandler;
+import sharkindream.gui.gamescreen.infomation.lobby.selectplayertype.SelectPlayerTypeController;
 import sharkindream.network.event.OnUpdateGuestHandler;
 import sharkindream.network.stream.playerstream.CharacterStatusStream;
 import sharkindream.network.stream.playerstream.Guest;
@@ -35,6 +37,7 @@ public class GameScreenController {
 		private AnchorPane animationpane;
 		@FXML
 		private AnchorPane infoscreen;
+		private static AnchorPane info;
 
 
 		private Map<Integer, Guest> guestlist = new HashMap<Integer, Guest>();
@@ -51,16 +54,17 @@ public class GameScreenController {
 
 		@FXML
 		void initialize(){
+			info = infoscreen;
+
 			//アニメーションの用意
 			final double Lengthcircle = 2 * Math.PI * Radius;
 			((Circle)animationpane.getChildren().get(0)).getStrokeDashArray().add(Lengthcircle);
 			((Circle)animationpane.getChildren().get(0)).setStrokeDashOffset(Lengthcircle);
-			((Circle)animationpane.getChildren().get(0)).setRadius(150);
+			//((Circle)animationpane.getChildren().get(0)).setRadius(150);
 			((AnchorPane)animationpane.getChildren().get(1)).setOpacity(0);
 			((AnchorPane)animationpane.getChildren().get(2)).setOpacity(0);
 			((SVGPath)((AnchorPane)animationpane.getChildren().get(2)).getChildren().get(1)).setOpacity(0);
 			((Text)((AnchorPane)animationpane.getChildren().get(2)).getChildren().get(2)).setOpacity(0);
-
 			playstartanimation();
 		}
 
@@ -96,10 +100,13 @@ public class GameScreenController {
 
 			KeyValue kvcl = new KeyValue(((Circle)animationpane.getChildren().get(0)).strokeDashOffsetProperty(), 0, interpolator);
 			KeyFrame kfcl = new KeyFrame(Duration.seconds(1.6), kvcl);
+
+			/*
 			KeyValue kvcr0 = new KeyValue(((Circle)animationpane.getChildren().get(0)).radiusProperty(), 150);
 			KeyFrame kfcr0 = new KeyFrame(Duration.seconds(1.4), kvcr0);
 			KeyValue kvcr1 = new KeyValue(((Circle)animationpane.getChildren().get(0)).radiusProperty(), 450, interpolator);
 			KeyFrame kfcr1 = new KeyFrame(Duration.seconds(2.3), kvcr1);
+			*/
 
 			KeyValue kvci0 = new KeyValue(((AnchorPane)animationpane.getChildren().get(1)).opacityProperty(), 0);
 			KeyFrame kfci0 = new KeyFrame(Duration.seconds(2.4), kvci0);
@@ -130,10 +137,11 @@ public class GameScreenController {
 				@Override
 				public void handle(ActionEvent event) {
 
-					AnchorPane infoscreen_;
 					try {
-						infoscreen_ = (AnchorPane)FXMLLoader.load(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectplayertype/SelectPlayerType.fxml"));
-						infoscreen.getChildren().add(infoscreen_);
+						FXMLLoader fxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectplayertype/SelectPlayerType.fxml"));
+						AnchorPane infoscreen = fxml.load();
+						((SelectPlayerTypeController)fxml.getController()).addMoveScreenListener(new OnMoveScreenHandler());
+						switchInfoScreen(infoscreen);
 					} catch (IOException e) {
 						// TODO 自動生成された catch ブロック
 						e.printStackTrace();
@@ -158,8 +166,6 @@ public class GameScreenController {
 
 
 			timeline.getKeyFrames().add(kfcl);
-			timeline.getKeyFrames().add(kfcr0);
-			timeline.getKeyFrames().add(kfcr1);
 			timeline.getKeyFrames().add(kfci0);
 			timeline.getKeyFrames().add(kfci1);
 			timeline.getKeyFrames().add(kfcs0);
@@ -202,55 +208,6 @@ public class GameScreenController {
 				}
 			}
 			updatePlayerBox();
-
-
-
-
-
-			//-----------------------------------------------
-			/*
-			AnchorPane playerstatus;
-			try {
-
-				playerstatus = (AnchorPane)FXMLLoader.load(getClass().getResource("playerstatus/PlayerStatus.fxml"));
-				Text playername = (Text) ((Pane)((Pane)playerstatus.getChildren().get(0)).getChildren().get(0)).getChildren().get(0);
-				playername.setText(pname);
-
-				playerbox.getChildren().add(playerstatus);
-			} catch (IOException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
-		}
-
-		//---------------------------------
-		public void updateGuestInfo(GuestStream guestst) {
-
-			for(Guest guest: guestst.getList() ){
-
-				if(guestlist.containsKey(Integer.valueOf(guest.playerID))){
-					if(!guestlist.get(Integer.valueOf(guest.playerID)).equals(guest)){
-						guestlist.replace(Integer.valueOf(guest.playerID), guest);
-					}
-				}else {
-					guestlist.put(Integer.valueOf(guest.playerID), guest);
-				}
-			}
-
-			if(guestst.getList().size() < guestlist.size()) {
-				List<Integer> cloneguest = new ArrayList<Integer>();
-				for(Guest guest: guestlist.values()) {
-					cloneguest.add(guest.playerID);
-				}
-				for(Guest guest: guestst.getList()) {
-					cloneguest.remove(guest.playerID);
-				}
-				for(Integer id: cloneguest) {
-					guestlist.remove(id);
-				}
-			}
-			updatePlayerBox();
-			*/
 		}
 
 
@@ -302,6 +259,17 @@ public class GameScreenController {
 
 			playerboxaxis.setRotate(rotationamount);
 		}
+
+		public static void switchInfoScreen(AnchorPane infoscreen_) {
+			info.getChildren().clear();
+			info.getChildren().add(infoscreen_);
+
+			AnchorPane.setTopAnchor(infoscreen_, 0d);
+			AnchorPane.setBottomAnchor(infoscreen_, 0d);
+			AnchorPane.setLeftAnchor(infoscreen_, 0d);
+			AnchorPane.setRightAnchor(infoscreen_, 0d);
+		}
+
 
 
 

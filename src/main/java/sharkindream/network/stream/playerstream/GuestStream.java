@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import sharkindream.deck.Deck;
 import sharkindream.network.event.OnUpdateGuestHandler;
@@ -19,11 +18,6 @@ public class GuestStream implements Serializable{
 
 	transient private OnUpdateGuestHandler listner = new OnUpdateGuestHandler();
 
-
-	public Stream<List<Guest>> toStream(){
-		return Stream.of(list);
-	}
-
 	public List<Guest> getList() {
 		return list;
 	}
@@ -34,19 +28,6 @@ public class GuestStream implements Serializable{
 			guest.isready = false;
 		}
 	}
-
-
-	public boolean isAllReady() {
-		//全員がレディーを押したら終了
-		boolean isallready = false;
-		for(Guest guest: getList()) {
-			isallready = guest.isready;
-			if(!isallready) break;
-		}
-		return isallready;
-
-	}
-
 
 	public void addGuest(Guest guest) {
 		guest.playerID = list.size();
@@ -114,9 +95,11 @@ public class GuestStream implements Serializable{
 
 	private boolean checkAllReady() {
 		boolean isallready = false;
-		for(Guest guest: list) {
-			isallready = guest.isready;
-			if(!isallready) break;
+		if(list.size() > 1) {
+			for(Guest guest: list) {
+				isallready = guest.isready;
+				if(!isallready) break;
+			}
 		}
 
 		isAllReady = isallready;

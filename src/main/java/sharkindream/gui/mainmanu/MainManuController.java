@@ -64,6 +64,7 @@ public class MainManuController {
 
 	private final int Radius = 90;
 	private final int Anglebody = 65;
+	private OnMoveScreenHandler listener;
 
 
 	@FXML
@@ -310,8 +311,6 @@ public class MainManuController {
 		timeline.getKeyFrames().add(kfmt0);
 		timeline.getKeyFrames().add(kfmt1);
 
-
-
 		return timeline;
 
 	}
@@ -499,21 +498,8 @@ public class MainManuController {
 			break;
 		}
 
-		/*
-		for(int i=0; i<4; ++i) {
 
-			KeyValue kvcc = new KeyValue( ((Circle)((AnchorPane)((AnchorPane)rotatepane.getChildren().get(i+1)).getChildren().get(0)).getChildren().get(0)).fillProperty(),
-					Paint.valueOf(Color.web("#383838", 1).toString()));
-			if(rotatepane.getChildren().get(i+1).getId() == targetcircle.getId()) {
-				kvcc = new KeyValue( ((Circle)((AnchorPane)((AnchorPane)rotatepane.getChildren().get(i+1)).getChildren().get(0)).getChildren().get(0)).fillProperty(),
-						Paint.valueOf(Color.web("#f4f4f4", 1).toString()));
-			}
-			KeyFrame kfcc = new KeyFrame(Duration.seconds(0.5), kvcc);
-			rotatetimeline.getKeyFrames().add(kfcc);
-		}
-		*/
-
-
+		setActivemenu((int) (angle / 90));
 
 		KeyValue kvm = new KeyValue(rotatepane.rotateProperty(),	 angle);
 		KeyFrame kfm = new KeyFrame(Duration.seconds(0.5), kvm);
@@ -529,32 +515,18 @@ public class MainManuController {
 
 	}
 
-	/*
-	private Timeline getonClickMenuAnimetionTimeline(String clickid) {
-		Timeline timeline = new Timeline();
-
-
-		if(clickid != activeid) {
-			for(Node menu: menulistpane.getChildren()) {
-
-				Timeline tlc = new Timeline();
-				Timeline tlo = new Timeline();
-				if(((AnchorPane)menu).getId() == activeid) //閉じるアニメーション
-				if(((AnchorPane)menu).getId() == clickid) System.out.println(); //開くアニメーション
-				//menuid == clickid => 開く => activeid = clickid
-			}
-
-			ParallelTransition paralleltransition = new ParallelTransition(tlb, tl0, tl10, tl11, tl12, tl13, tl2, tl30, tl31, tl4);
-
-			return paralleltransition;
+	private void setActivemenu(int activenum) {
+		for(int i=0; i < 4; ++i) {
+			System.out.println(i);
+			AnchorPane menupane = (AnchorPane)menulistpane.getChildren().get(i+1);
+			menupane.setDisable( (activenum != i) );
 		}
 	}
-	*/
 
 
-	//------------------------------------------------------------------------
+
 	@FXML
-	public void onBuild() {
+	private void onBuild() {
 
 		OnRunServerHandler handle = new OnRunServerHandler();
 
@@ -570,7 +542,7 @@ public class MainManuController {
 	}
 
 	@FXML
-	public void onJoin() {
+	private void onJoin() {
 		OnConnectedServerHandler handle = new OnConnectedServerHandler() ;
 		OnMoveScreenHandler moveScreenHandler = new OnMoveScreenHandler();
 
@@ -579,12 +551,30 @@ public class MainManuController {
 			client.addConnecedListener(handle);
 			client.addMoveScreenListener(moveScreenHandler);
 			service.submit(client);
-
 		}else{
 			//TODO:視覚的にわかりやすいエラーへ
 			System.out.println("正しい値を入力してください");
 		}
 	}
 
+	@FXML
+	private void onClickEditDeck() {
+		onClickedMoveEditDeck();
+	}
 
+
+	//リスナ登録
+	public void addMoveScreenListener(OnMoveScreenHandler handler) {
+		this.listener = handler;
+	}
+
+	public void removeMoveScreenListener() {
+		this.listener = null;
+	}
+
+	private void onClickedMoveEditDeck() {
+		if(listener != null) {
+			listener.onMoveEditDeckScreen();
+		}
+	}
 }

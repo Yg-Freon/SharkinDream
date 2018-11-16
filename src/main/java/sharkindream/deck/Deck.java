@@ -19,7 +19,7 @@ import sharkindream.actioncard.ActionCard;
 
 public class Deck implements Serializable{
 	/*デッキID*/
-	public int deckID = 0;
+	private int deckID = 0;
 	public final int maxcardnum = 4;
 
 	public ActionCard[] cardlist = new ActionCard[maxcardnum];
@@ -70,4 +70,7 @@ public class Deck implements Serializable{
 		System.out.println(gson.toJson(this));
 	}
 
+	public int getDeckID() {
+		return this.deckID;
+	}
 }

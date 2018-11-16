@@ -7,24 +7,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.SVGPath;
 import sharkindream.gamecharacter.Type;
+import sharkindream.gui.event.OnMoveScreenHandler;
+import sharkindream.gui.gamescreen.infomation.lobby.createminion.SelectMinionScreenController;
 import sharkindream.network.client.Client;
-import sharkindream.network.stream.playerstream.Guest;
 
 public class SelectPlayerTypeController {
 
-
-	public static Guest mystatus = new Guest();
-
-	public static HBox minioninfoes;
+	@FXML
+	private static HBox minioninfoes;
 
 	@FXML
 	public SVGPath svg;
 
+	private OnMoveScreenHandler listener;
 
 
-	/*
+
+
 	@FXML
 	public void onClick() {
 
@@ -37,13 +39,12 @@ public class SelectPlayerTypeController {
 			AnchorPane minioninfo1 = (AnchorPane)FXMLLoader.load(getClass().getResource("/danzaigame/gui/gamescreen/infomation/gameplay/minioninfo/MinionInfo.fxml"));
 			addMinionInfo(minioninfo0, minioninfo1);
 
-			Client.switchGameInfoscreen(gameinfoplayscreen);
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 	}
-	*/
+
 
 	public static void addMinionInfo(AnchorPane minioninfo0, AnchorPane minioninfo1) {
 		minioninfoes.getChildren().clear();
@@ -59,31 +60,31 @@ public class SelectPlayerTypeController {
 
 	@FXML
 	public void onClickFire() {
-		mystatus.type = Type.Fire;
+		Client.getMyStatus().type = Type.Fire;
 		nextScreen();
 	}
 
 	@FXML
 	public void onClickWater() {
-		mystatus.type = Type.Water;
+		Client.getMyStatus().type = Type.Water;
 		nextScreen();
 	}
 
 	@FXML
 	public void onClickLeaf() {
-		mystatus.type = Type.Leaf;
+		Client.getMyStatus().type = Type.Leaf;
 		nextScreen();
 	}
 
 	@FXML
 	public void onClickLight() {
-		mystatus.type = Type.Light;
+		Client.getMyStatus().type = Type.Light;
 		nextScreen();
 	}
 
 	@FXML
 	public void onClickDark() {
-		mystatus.type = Type.Dark;
+		Client.getMyStatus().type = Type.Dark;
 		nextScreen();
 	}
 
@@ -92,16 +93,32 @@ public class SelectPlayerTypeController {
 	private void nextScreen() {
 
 		FXMLLoader minioncreatefxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/createminion/SelectMinionScreen.fxml"));
-
-		AnchorPane minioncreatescreen;
+		AnchorPane infoscreen;
 		try {
-			minioncreatescreen = (AnchorPane)minioncreatefxml.load();
-			Client.switchGameInfoLobbymanu(minioncreatescreen);
+			infoscreen = minioncreatefxml.load();
+			((SelectMinionScreenController)minioncreatefxml.getController()).addMoveScreenListener(new OnMoveScreenHandler());
+			switchInfoScreen(infoscreen);
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
-		//((CreateMinionScreenController)minioncreatefxml.getController()).initializeChoiceBox(1);
+	}
+
+
+
+	//リスナ登録
+	public void addMoveScreenListener(OnMoveScreenHandler handler) {
+		this.listener = handler;
+	}
+
+	public void removeMoveScreenListener() {
+		this.listener = null;
+	}
+
+	private void switchInfoScreen(AnchorPane infoscreen) {
+		if(listener != null) {
+			listener.onSwitchInfomationScreen(infoscreen);
+		}
 	}
 
 

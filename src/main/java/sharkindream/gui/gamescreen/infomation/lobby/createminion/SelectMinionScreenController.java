@@ -6,13 +6,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import sharkindream.gui.event.OnMoveScreenHandler;
 import sharkindream.gui.gamescreen.infomation.lobby.selectdeck.SelectDeckController;
 import sharkindream.gui.gamescreen.infomation.lobby.selectplayertype.SelectPlayerTypeController;
-import sharkindream.network.client.Client;
 
 public class SelectMinionScreenController {
 
 
+
+	private OnMoveScreenHandler listener;
 
 	@FXML
 	public void onMouseClickedSelect(MouseEvent e) {
@@ -24,30 +26,44 @@ public class SelectMinionScreenController {
 	public void gonextpage() {
 
 		FXMLLoader selectdeckfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectdeck/SelectDeck.fxml"));
-
-		AnchorPane deckselectscreen;
+		AnchorPane deckscreen;
 		try {
-			deckselectscreen = (AnchorPane)selectdeckfxml.load();
-			Client.switchGameInfoLobbymanu(deckselectscreen);
+			deckscreen = (AnchorPane)selectdeckfxml.load();
+			((SelectDeckController)selectdeckfxml.getController()).addMoveScreenListener(new OnMoveScreenHandler());
+			switchInfoScreen(deckscreen);
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
-		((SelectDeckController)selectdeckfxml.getController()).initializeDeck(SelectPlayerTypeController.mystatus.deck.deckID);
 	}
 
 	@FXML
 	public void returnpage() {
 
-		FXMLLoader lobbyscreenfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectplayertype/SelectPlayerType.fxml"));
-
-		AnchorPane lobbyscreen;
+		FXMLLoader playertypescreenfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectplayertype/SelectPlayerType.fxml"));
+		AnchorPane infoscreen;
 		try {
-			lobbyscreen = (AnchorPane)lobbyscreenfxml.load();
-			Client.switchGameInfoLobbymanu(lobbyscreen);
+			infoscreen = playertypescreenfxml.load();
+			((SelectPlayerTypeController)playertypescreenfxml.getController()).addMoveScreenListener(new OnMoveScreenHandler());
+			switchInfoScreen(infoscreen);
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
+		}
+	}
+
+	//リスナ登録
+	public void addMoveScreenListener(OnMoveScreenHandler handler) {
+		this.listener = handler;
+	}
+
+	public void removeMoveScreenListener() {
+		this.listener = null;
+	}
+
+	private void switchInfoScreen(AnchorPane infoscreen) {
+		if(listener != null) {
+			listener.onSwitchInfomationScreen(infoscreen);
 		}
 	}
 }

@@ -250,68 +250,6 @@
                                           <Point3D x="-1.0" />
                                        </rotationAxis>
                                     </AnchorPane>
-                                    <AnchorPane disable="true" layoutX="-90.0" layoutY="-180.0" prefHeight="320.0" prefWidth="450.0" rotate="90.0">
-                                       <children>
-                                          <AnchorPane prefHeight="320.0" prefWidth="450.0" rotate="-90.0" translateX="225.0">
-                                             <children>
-                                                <AnchorPane prefHeight="120.0" prefWidth="450.0" translateX="-225.0" AnchorPane.topAnchor="0.0">
-                                                   <children>
-                                                      <SVGPath content="M0,0 L 450 0 L 450 120 L 0 120 Z" disable="true" fill="TRANSPARENT" stroke="#383838" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                         <children>
-                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Host" AnchorPane.topAnchor="15.0">
-                                                               <font>
-                                                                  <Font size="28.0" />
-                                                               </font>
-                                                            </Text>
-                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onBuild" prefHeight="20.0" prefWidth="20.0">
-                                                               <children>
-                                                                  <SVGPath content="M 0 0 L 15 20 L 0 40" fill="TRANSPARENT" stroke="#f4f4f4" strokeWidth="1.2" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
-                                                               </children>
-                                                            </AnchorPane>
-                                                            <TextField fx:id="serverport14" layoutX="15.0" layoutY="75.0" prefHeight="50.0" prefWidth="400.0" promptText="Port" style="-fx-background-color: #f4f4f4;" AnchorPane.topAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="25.0" />
-                                                               </font>
-                                                            </TextField>
-                                                         </children>
-                                                      </AnchorPane>
-                                                   </children>
-                                                </AnchorPane>
-                                                <AnchorPane prefHeight="120.0" prefWidth="200.0" translateX="-225.0" AnchorPane.topAnchor="200.0">
-                                                   <children>
-                                                      <SVGPath content="M0,0 L 450 0 L 450 120 L 0 120 Z" disable="true" fill="TRANSPARENT" layoutX="10.0" layoutY="10.0" stroke="#383838" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                         <children>
-                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client" AnchorPane.topAnchor="15.0">
-                                                               <font>
-                                                                  <Font size="28.0" />
-                                                               </font>
-                                                            </Text>
-                                                            <TextField fx:id="serveraddress14" layoutX="15.0" layoutY="75.0" prefHeight="50.0" prefWidth="400.0" promptText="IP:Port" style="-fx-background-color: #f4f4f4;" AnchorPane.topAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="25.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onJoin" prefHeight="20.0" prefWidth="20.0">
-                                                               <children>
-                                                                  <SVGPath content="M 0 0 L 15 20 L 0 40" fill="TRANSPARENT" stroke="#f4f4f4" strokeWidth="1.2" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
-                                                               </children>
-                                                            </AnchorPane>
-                                                         </children>
-                                                      </AnchorPane>
-                                                   </children>
-                                                </AnchorPane>
-                                             </children>
-                                             <rotationAxis>
-                                                <Point3D y="1.0" />
-                                             </rotationAxis>
-                                          </AnchorPane>
-                                       </children>
-                                       <rotationAxis>
-                                          <Point3D x="-1.0" />
-                                       </rotationAxis>
-                                    </AnchorPane>
                                     <AnchorPane disable="true" layoutX="-90.0" layoutY="560.0" prefHeight="320.0" prefWidth="450.0" rotate="90.0">
                                        <children>
                                           <AnchorPane prefHeight="320.0" prefWidth="450.0" rotate="90.0" translateX="225.0">
@@ -321,21 +259,16 @@
                                                       <SVGPath content="M0,0 L 450 0 L 450 120 L 0 120 Z" disable="true" fill="TRANSPARENT" stroke="#383838" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
-                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Host" AnchorPane.topAnchor="15.0">
+                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit" AnchorPane.topAnchor="15.0">
                                                                <font>
                                                                   <Font size="28.0" />
                                                                </font>
                                                             </Text>
-                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onBuild" prefHeight="20.0" prefWidth="20.0">
+                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onClickEditDeck" prefHeight="20.0" prefWidth="20.0">
                                                                <children>
                                                                   <SVGPath content="M 0 0 L 15 20 L 0 40" fill="TRANSPARENT" stroke="#f4f4f4" strokeWidth="1.2" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
                                                                </children>
                                                             </AnchorPane>
-                                                            <TextField fx:id="serverport11" layoutX="15.0" layoutY="75.0" prefHeight="50.0" prefWidth="400.0" promptText="Port" style="-fx-background-color: #f4f4f4;" AnchorPane.topAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="25.0" />
-                                                               </font>
-                                                            </TextField>
                                                          </children>
                                                       </AnchorPane>
                                                    </children>
@@ -345,17 +278,12 @@
                                                       <SVGPath content="M0,0 L 450 0 L 450 120 L 0 120 Z" disable="true" fill="TRANSPARENT" layoutX="10.0" layoutY="10.0" stroke="#383838" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
-                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client" AnchorPane.topAnchor="15.0">
+                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show" AnchorPane.topAnchor="15.0">
                                                                <font>
                                                                   <Font size="28.0" />
                                                                </font>
                                                             </Text>
-                                                            <TextField fx:id="serveraddress11" layoutX="15.0" layoutY="75.0" prefHeight="50.0" prefWidth="400.0" promptText="IP:Port" style="-fx-background-color: #f4f4f4;" AnchorPane.topAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="25.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onJoin" prefHeight="20.0" prefWidth="20.0">
+                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onClickEditDeck" prefHeight="20.0" prefWidth="20.0">
                                                                <children>
                                                                   <SVGPath content="M 0 0 L 15 20 L 0 40" fill="TRANSPARENT" stroke="#f4f4f4" strokeWidth="1.2" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
                                                                </children>
@@ -383,7 +311,59 @@
                                                       <SVGPath content="M0,0 L 450 0 L 450 120 L 0 120 Z" disable="true" fill="TRANSPARENT" stroke="#383838" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
-                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Host" AnchorPane.topAnchor="15.0">
+                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setting" AnchorPane.topAnchor="15.0">
+                                                               <font>
+                                                                  <Font size="28.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onBuild" prefHeight="20.0" prefWidth="20.0">
+                                                               <children>
+                                                                  <SVGPath content="M 0 0 L 15 20 L 0 40" fill="TRANSPARENT" onMouseClicked="#onClickEditDeck" stroke="#f4f4f4" strokeWidth="1.2" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="120.0" prefWidth="200.0" translateX="-225.0" AnchorPane.topAnchor="200.0">
+                                                   <children>
+                                                      <SVGPath content="M0,0 L 450 0 L 450 120 L 0 120 Z" disable="true" fill="TRANSPARENT" layoutX="10.0" layoutY="10.0" stroke="#383838" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exit" AnchorPane.topAnchor="15.0">
+                                                               <font>
+                                                                  <Font size="28.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onJoin" prefHeight="20.0" prefWidth="20.0">
+                                                               <children>
+                                                                  <SVGPath content="M 0 0 L 15 20 L 0 40" fill="TRANSPARENT" onMouseClicked="#onClickEditDeck" stroke="#f4f4f4" strokeWidth="1.2" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                             <rotationAxis>
+                                                <Point3D y="1.0" />
+                                             </rotationAxis>
+                                          </AnchorPane>
+                                       </children>
+                                       <rotationAxis>
+                                          <Point3D x="-1.0" />
+                                       </rotationAxis>
+                                    </AnchorPane>
+                                    <AnchorPane disable="true" layoutX="-90.0" layoutY="-180.0" prefHeight="320.0" prefWidth="450.0" rotate="90.0">
+                                       <children>
+                                          <AnchorPane prefHeight="320.0" prefWidth="450.0" rotate="-90.0" translateX="225.0">
+                                             <children>
+                                                <AnchorPane prefHeight="120.0" prefWidth="450.0" translateX="-225.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <SVGPath content="M0,0 L 450 0 L 450 120 L 0 120 Z" disable="true" fill="TRANSPARENT" stroke="#383838" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit" AnchorPane.topAnchor="15.0">
                                                                <font>
                                                                   <Font size="28.0" />
                                                                </font>
@@ -393,11 +373,6 @@
                                                                   <SVGPath content="M 0 0 L 15 20 L 0 40" fill="TRANSPARENT" stroke="#f4f4f4" strokeWidth="1.2" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
                                                                </children>
                                                             </AnchorPane>
-                                                            <TextField fx:id="serverport12" layoutX="15.0" layoutY="75.0" prefHeight="50.0" prefWidth="400.0" promptText="Port" style="-fx-background-color: #f4f4f4;" AnchorPane.topAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="25.0" />
-                                                               </font>
-                                                            </TextField>
                                                          </children>
                                                       </AnchorPane>
                                                    </children>
@@ -412,7 +387,7 @@
                                                                   <Font size="28.0" />
                                                                </font>
                                                             </Text>
-                                                            <TextField fx:id="serveraddress12" layoutX="15.0" layoutY="75.0" prefHeight="50.0" prefWidth="400.0" promptText="IP:Port" style="-fx-background-color: #f4f4f4;" AnchorPane.topAnchor="50.0">
+                                                            <TextField fx:id="serveraddress14" layoutX="15.0" layoutY="75.0" prefHeight="50.0" prefWidth="400.0" promptText="IP:Port" style="-fx-background-color: #f4f4f4;" AnchorPane.topAnchor="50.0">
                                                                <font>
                                                                   <Font size="25.0" />
                                                                </font>

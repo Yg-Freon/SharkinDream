@@ -5,18 +5,16 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import sharkindream.gui.event.OnMoveScreenHandler;
 import sharkindream.gui.gamescreen.infomation.lobby.selectdeck.SelectDeckController;
-import sharkindream.gui.gamescreen.infomation.lobby.selectplayertype.SelectPlayerTypeController;
 import sharkindream.network.client.Client;
 import sharkindream.network.event.OnUpdateGuestHandler;
+import sharkindream.network.stream.playerstream.Guest;
 
 public class ReadyScreenController {
 
-	OnUpdateGuestHandler handler = new OnUpdateGuestHandler();
-
-	public void initreadyscreen() {
-			handler.onUpdateGuestInfo(SelectPlayerTypeController.mystatus);
-	}
+	private OnUpdateGuestHandler guestupdatelistener = null;
+	private OnMoveScreenHandler movescreenlistener = null;
 
 
 	@FXML
@@ -24,14 +22,14 @@ public class ReadyScreenController {
 
 
 		setisready(false);
-		handler.onUpdateGuestInfo(SelectPlayerTypeController.mystatus);
+		onUpdateGuestInfo(Client.getMyStatus());
 		FXMLLoader selectdeckfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectdeck/SelectDeck.fxml"));
 
 		AnchorPane deckselectscreen;
 		try {
 			deckselectscreen = (AnchorPane)selectdeckfxml.load();
-			Client.switchGameInfoLobbymanu(deckselectscreen);
-			((SelectDeckController)selectdeckfxml.getController()).initializeDeck(SelectPlayerTypeController.mystatus.deck.deckID);
+			((SelectDeckController)selectdeckfxml.getController()).addMoveScreenListener(new OnMoveScreenHandler());
+			switchInfoScreen(deckselectscreen );
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
@@ -39,6 +37,40 @@ public class ReadyScreenController {
 	}
 
 	public void setisready(boolean flag) {
-		SelectPlayerTypeController.mystatus.isready = flag;
+		Client.getMyStatus().isready = flag;
+		onUpdateGuestInfo(Client.getMyStatus());
+	}
+
+
+
+	//リスナ登録
+	public void addOnUpdateGuestInfoHandler(OnUpdateGuestHandler handler) {
+		this.guestupdatelistener = handler;
+	}
+
+	public void removeOnUpdateGuestInfoHandler() {
+		this.guestupdatelistener = null;
+	}
+
+	private void onUpdateGuestInfo(Guest guest) {
+		if(guestupdatelistener != null) {
+			guestupdatelistener.onUpdateGuestInfo(guest);
+		}
+	}
+
+
+	//リスナ登録
+	public void addMoveScreenListener(OnMoveScreenHandler handler) {
+		this.movescreenlistener = handler;
+	}
+
+	public void removeMoveScreenListener() {
+		this.movescreenlistener = null;
+	}
+
+	private void switchInfoScreen(AnchorPane infoscreen) {
+		if(movescreenlistener != null) {
+			movescreenlistener.onSwitchInfomationScreen(infoscreen);
+		}
 	}
 }

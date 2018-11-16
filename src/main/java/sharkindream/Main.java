@@ -1,4 +1,4 @@
-package sharkindream.gui;
+package sharkindream;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -8,19 +8,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import sharkindream.gui.event.OnMoveScreenHandler;
-import sharkindream.gui.title.TitleController;
 
 
 public class Main extends Application {
 
 	public static AnchorPane mainscreen;
-
-	/*
-	public static FXMLLoader gamescene;
-	public static FXMLLoader mainmanuscene;
-	public static AnchorPane gameinfoscene;
-	*/
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -30,20 +22,11 @@ public class Main extends Application {
 				System.out.println("終了します");
 				System.exit(0);
 			});
+
+
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("Form.fxml"));
 
 			mainscreen = (AnchorPane) root.getChildren().get(0);
-
-
-			//---------------------------------------
-			FXMLLoader titlefxml =new FXMLLoader(getClass().getResource("/sharkindream/gui/title/Title.fxml"));
-			AnchorPane title = (AnchorPane)titlefxml.load();
-			((TitleController)titlefxml.getController()).addMoveScreenListener(new OnMoveScreenHandler());
-			((TitleController)titlefxml.getController()).readyanimation();
-
-			switchMainScreen(title);
-			//----------------------------------------------
-
 
 			Scene scene = new Scene(root,1100,700);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -53,16 +36,6 @@ public class Main extends Application {
 			primaryStage.setMaxWidth(1600);
 			primaryStage.setMaxHeight(900);
 			primaryStage.show();
-
-			//-------------------------------
-
-			/*
-			gamescene = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/GameScreen.fxml"));
-			mainmanuscene = new FXMLLoader(getClass().getResource("mainmanu/MainManu.fxml"));
-
-			gameinfoscene = (AnchorPane)FXMLLoader.load(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectplayertype/LobbyScreen.fxml"));
-			*/
-
 
 
 		} catch(Exception e) {

@@ -6,8 +6,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
-import sharkindream.gui.Main;
-import sharkindream.gui.editscreen.deck.EditDeckController;
+import sharkindream.Main;
 
 public class SubManuEditController {
 
@@ -19,7 +18,7 @@ public class SubManuEditController {
 		try {
 			FXMLLoader editfxml = new FXMLLoader(getClass().getResource("/danzaigame/gui/editscreen/deck/EditDeck.fxml"));
 			editscreen = (AnchorPane)editfxml.load();
-			((EditDeckController)editfxml.getController()).initpage();
+			//((EditDeckController)editfxml.getController()).initpage();
 
 			Platform.runLater( () -> 	Main.switchMainScreen(editscreen));
 		} catch (IOException e) {

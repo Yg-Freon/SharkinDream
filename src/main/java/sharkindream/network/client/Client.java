@@ -10,12 +10,14 @@ import javafx.concurrent.Task;
 import javafx.scene.layout.AnchorPane;
 import sharkindream.gui.event.OnMoveScreenHandler;
 import sharkindream.network.event.OnConnectedServerHandler;
+import sharkindream.network.stream.playerstream.Guest;
 
 public class Client extends Task<Void>{
 
 	private static AnchorPane gameinfolobbyscreen;
 	private OnConnectedServerHandler listener = null;
 	private OnMoveScreenHandler movelistener = null;
+	private static Guest mystatus = new Guest();
 	public static ClientGamePlayFlow cflow;
 
 	private String ipaddress = "127.0.0.1";
@@ -130,19 +132,11 @@ public class Client extends Task<Void>{
 		return this.ipaddress;
 	}
 
-
-
-	public static void switchGameInfoLobbymanu(AnchorPane lobbyscreen) {
-		((AnchorPane)gameinfolobbyscreen.getChildren().get(1)).getChildren().clear();
-		((AnchorPane)gameinfolobbyscreen.getChildren().get(1)).getChildren().add(lobbyscreen);
-
-		AnchorPane.setTopAnchor(lobbyscreen, 0d);
-		AnchorPane.setBottomAnchor(lobbyscreen, 0d);
-		AnchorPane.setLeftAnchor(lobbyscreen, 0d);
-		AnchorPane.setRightAnchor(lobbyscreen, 0d);
+	public static Guest getMyStatus() {
+		return mystatus;
 	}
 
-
+	//--------------------------------------------------------------------------------------
 
 	//リスナ登録
 	public void addConnecedListener(OnConnectedServerHandler handler) {
@@ -174,9 +168,6 @@ public class Client extends Task<Void>{
 			movelistener.onMoveClientGameScreen(cflow);
 		}
 	}
-
-
-
 
 
 }

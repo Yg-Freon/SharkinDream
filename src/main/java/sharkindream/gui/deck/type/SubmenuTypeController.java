@@ -1,15 +1,15 @@
-package sharkindream.gui.editscreen.deck.type;
+package sharkindream.gui.deck.type;
 
 import javafx.fxml.FXML;
 import sharkindream.gamecharacter.Type;
-import sharkindream.gui.editscreen.deck.EditDeckController;
+import sharkindream.gui.deck.EditDeckController;
 
-public class SubmanuTypeController {
+public class SubmenuTypeController {
 
 	EditDeckController controller;
 
 
-	public void init(EditDeckController controller_ ) {
+	public void setController(EditDeckController controller_ ) {
 		this.controller = controller_;
 	}
 

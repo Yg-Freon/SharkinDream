@@ -5,11 +5,30 @@ import java.io.IOException;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
-import sharkindream.gui.Main;
+import sharkindream.Main;
+import sharkindream.gui.gamescreen.GameScreenController;
+import sharkindream.gui.mainmanu.MainManuController;
+import sharkindream.gui.title.TitleController;
 import sharkindream.network.client.ClientGamePlayFlow;
 
 public class OnMoveScreenHandler implements OnMoveScreenIF{
 
+
+	@Override
+	public void onMoveTitle() {
+
+		FXMLLoader titlefxml =new FXMLLoader(getClass().getResource("/sharkindream/gui/title/Title.fxml"));
+		AnchorPane title;
+		try {
+			title = (AnchorPane)titlefxml.load();
+			((TitleController)titlefxml.getController()).addMoveScreenListener(new OnMoveScreenHandler());
+			((TitleController)titlefxml.getController()).readyanimation();
+			Main.switchMainScreen(title);
+		} catch (IOException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+	}
 
 
 	@Override
@@ -19,54 +38,37 @@ public class OnMoveScreenHandler implements OnMoveScreenIF{
 		FXMLLoader editfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/mainmanu/MainManu.fxml"));
 		try {
 			editscreen = (AnchorPane)editfxml.load();
-			//((EditDeckController)editfxml.getController()).initpage();
+			((MainManuController)editfxml.getController()).addMoveScreenListener(this);
 			Main.switchMainScreen(editscreen);
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
+	}
 
+
+	@Override
+	public void onMoveEditDeckScreen() {
+		AnchorPane editscreen ;
+
+		FXMLLoader editfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/deck/EditDeck.fxml"));
+		try {
+			editscreen = (AnchorPane)editfxml.load();
+			Main.switchMainScreen(editscreen);
+		} catch (IOException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void onMoveClientGameScreen(ClientGamePlayFlow cflow) {
 
-		 FXMLLoader gamescenefxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/NewGameScreen.fxml"));
+		 FXMLLoader gamescenefxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/GameScreen.fxml"));
 		 AnchorPane gamescene;
 
 		 try {
 			gamescene = (AnchorPane)gamescenefxml.load();
-			/*
-			 * AnchorPane gameinfolobbyscreen = (AnchorPane)FXMLLoader.load(getClass().getResource("/sharkindream/gui/gamescreen/infomation/InfomationScreen.fxml"));
-			AnchorPane gameinfo = (AnchorPane)FXMLLoader.load(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectplayertype/LobbyScreen.fxml"));
-
-			((AnchorPane)gameinfo.getChildren().get(0)).getChildren().clear();
-			((AnchorPane)gameinfo.getChildren().get(0)).getChildren().add(gameinfolobbyscreen);
-
-			AnchorPane.setTopAnchor(gameinfolobbyscreen, 0d);
-			AnchorPane.setBottomAnchor(gameinfolobbyscreen, 0d);
-			AnchorPane.setLeftAnchor(gameinfolobbyscreen, 0d);
-			AnchorPane.setRightAnchor(gameinfolobbyscreen, 0d);
-
-			((AnchorPane)((BorderPane)gamescene.getChildren().get(0)).getChildren().get(1)).getChildren().clear();
-			((AnchorPane)((BorderPane)gamescene.getChildren().get(0)).getChildren().get(1)).getChildren().add(gameinfolobbyscreen);
-
-			AnchorPane.setTopAnchor(gameinfo, 0d);
-			AnchorPane.setBottomAnchor(gameinfo, 0d);
-			AnchorPane.setLeftAnchor(gameinfo, 0d);
-			AnchorPane.setRightAnchor(gameinfo, 0d);
-
-			AnchorPane lobbyscreen = (AnchorPane)FXMLLoader.load(getClass().getResource("/danzaigame/gui/gamescreen/infomation/lobby/selectplayertype/LobbyScreen.fxml"));
-
-			((AnchorPane)gameinfolobbyscreen.getChildren().get(0)).getChildren().clear();
-			((AnchorPane)gameinfolobbyscreen.getChildren().get(0)).getChildren().add(lobbyscreen);
-
-			AnchorPane.setTopAnchor(lobbyscreen, 0d);
-			AnchorPane.setBottomAnchor(lobbyscreen, 0d);
-			AnchorPane.setLeftAnchor(lobbyscreen, 0d);
-			AnchorPane.setRightAnchor(lobbyscreen, 0d);
-
-			*/
 
 			cflow.setGameController(gamescenefxml.getController());
 			Platform.runLater( () -> Main.switchMainScreen(gamescene));
@@ -75,9 +77,14 @@ public class OnMoveScreenHandler implements OnMoveScreenIF{
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
+	}
 
 
+	@Override
+	public void onSwitchInfomationScreen(AnchorPane infoscreen) {
+		GameScreenController.switchInfoScreen(infoscreen);
 
 	}
+
 
 }

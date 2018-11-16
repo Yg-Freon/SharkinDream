@@ -1,4 +1,4 @@
-package sharkindream.gui.editscreen.deck;
+package sharkindream.gui.deck;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,9 +14,11 @@ import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
@@ -25,8 +27,8 @@ import sharkindream.actioncard.ActionCard;
 import sharkindream.config.Setting;
 import sharkindream.deck.Deck;
 import sharkindream.gamecharacter.Type;
-import sharkindream.gui.editscreen.deck.resource.SubmanuResourceController;
-import sharkindream.gui.editscreen.deck.type.SubmanuTypeController;
+import sharkindream.gui.deck.resource.SubmenuResourceController;
+import sharkindream.gui.deck.type.SubmenuTypeController;
 
 public class EditDeckController {
 
@@ -63,7 +65,7 @@ public class EditDeckController {
 
 
 	private boolean isclosesubmanu = true;
-	private final int SUBMANUWIDTH = 150;
+	private final int SUBMENUWIDTH = 150;
 	private final int SUBHEIGHT = 200;
 
 	Deck[] decklist = new Deck[Setting.MaxDecknum];
@@ -79,20 +81,12 @@ public class EditDeckController {
 
 
 
-	/*
-	//初期化、デッキデータの読み込み
-	public void initDeck() {
-		for(int id=0; id<Setting.MaxDecknum; ++id) {
-			decklist[id] = new Deck().readDeckfromjson(id);
-		}
-	}
-	*/
-
-	public void initpage() {
+	@FXML
+	void initialize() {
 		deck = (new Deck()).readDeckfromjson(deckid);
 
 		updateUIInfo(deck);
-		
+
 	}
 
 	 private void updateUIInfo(Deck deck) {
@@ -106,6 +100,7 @@ public class EditDeckController {
 
 				setCardShowName(cardentry.getValue(), cardentry.getKey().power.getshowname());
 				setCardColor(cardentry.getValue(), cardentry.getKey().type.getColor());
+				setCardIcon(cardentry.getValue(), cardentry.getKey().resource.getIcon());
 				//真ん中のアイコン更新
 			}
 	 }
@@ -117,9 +112,25 @@ public class EditDeckController {
 
 	 private void setCardColor(AnchorPane pane, String color) {
 		 //TODO: pane追加
-		 
+
+		 //文字
 		 ((Label)((AnchorPane)pane.getChildren().get(0)).getChildren().get(0)).setTextFill(Paint.valueOf(color));
 		 ((Label)((AnchorPane)pane.getChildren().get(1)).getChildren().get(0)).setTextFill(Paint.valueOf(color));
+		 ((Label)((TilePane)pane.getChildren().get(2)).getChildren().get(0)).setTextFill(Paint.valueOf(color));
+
+
+		 ((Canvas)((AnchorPane)pane.getChildren().get(0)).getChildren().get(1)).getGraphicsContext2D().setFill(Paint.valueOf(color));
+		 ((Canvas)((AnchorPane)pane.getChildren().get(1)).getChildren().get(1)).getGraphicsContext2D().setFill(Paint.valueOf(color));
+
+	 }
+
+	 private void setCardIcon(AnchorPane pane, Canvas icon) {
+
+		 //((AnchorPane)pane.getChildren().get(0)).getChildren().remove(1);
+		 //((AnchorPane)pane.getChildren().get(0)).getChildren().add(icon);
+
+		 //((AnchorPane)pane.getChildren().get(1)).getChildren().remove(1);
+		 //((AnchorPane)pane.getChildren().get(1)).getChildren().add(icon);
 	 }
 
 	@FXML
@@ -171,13 +182,13 @@ public class EditDeckController {
 			KeyValue kvu0 = new KeyValue(uline.endXProperty(), 0, Interpolator.LINEAR);
 			KeyFrame kfu0 = new KeyFrame(Duration.ZERO, kvu0);
 
-			KeyValue kvu1 = new KeyValue(uline.endXProperty(), this.SUBMANUWIDTH);
+			KeyValue kvu1 = new KeyValue(uline.endXProperty(), this.SUBMENUWIDTH);
 			KeyFrame kfu1 = new KeyFrame(Duration.seconds(0.3), kvu1);
 
 			KeyValue kvd0 = new KeyValue(dline.endXProperty(), 0, Interpolator.LINEAR);
 			KeyFrame kfd0 = new KeyFrame(Duration.ZERO, kvd0);
 
-			KeyValue kvd1 = new KeyValue(dline.endXProperty(), this.SUBMANUWIDTH);
+			KeyValue kvd1 = new KeyValue(dline.endXProperty(), this.SUBMENUWIDTH);
 			KeyFrame kfd1 = new KeyFrame(Duration.seconds(0.3), kvd1);
 
 			KeyValue kvp0 = new KeyValue(submanu.prefHeightProperty(), 0, Interpolator.LINEAR);
@@ -198,25 +209,27 @@ public class EditDeckController {
 
 			timeline.play();
 
+
 			switch(id) {
 			case 0:
 				try {
-					FXMLLoader typefxml = new FXMLLoader(getClass().getResource("/danzaigame/gui/editscreen/deck/type/SubmanuType.fxml"));
+					FXMLLoader typefxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/deck/type/SubmenuType.fxml"));
 
 					AnchorPane pane = typefxml.load();
-					((SubmanuTypeController)typefxml.getController()).init(this);
+					((SubmenuTypeController)typefxml.getController()).setController(this);
 					((AnchorPane)submanu.getChildren().get(2)).getChildren().add(pane);
 				} catch (IOException e) {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
 				}
 				break;
-			case 1:
+
+			  case 1:
 				try {
-					FXMLLoader resourcefxml = new FXMLLoader(getClass().getResource("/danzaigame/gui/editscreen/deck/resource/SubmanuResource.fxml"));
+					FXMLLoader resourcefxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/deck/resource/SubmenuResource.fxml"));
 
 					AnchorPane pane = resourcefxml.load();
-					((SubmanuResourceController)resourcefxml.getController()).getController(this);
+					((SubmenuResourceController)resourcefxml.getController()).getController(this);
 					((AnchorPane)submanu.getChildren().get(2)).getChildren().add(pane);
 				} catch (IOException e) {
 					// TODO 自動生成された catch ブロック
@@ -236,13 +249,13 @@ public class EditDeckController {
 			KeyValue kvu0 = new KeyValue(uline.endXProperty(), 0, Interpolator.LINEAR);
 			KeyFrame kfu0 = new KeyFrame(Duration.seconds(0.3), kvu0);
 
-			KeyValue kvu1 = new KeyValue(uline.endXProperty(), this.SUBMANUWIDTH);
+			KeyValue kvu1 = new KeyValue(uline.endXProperty(), this.SUBMENUWIDTH);
 			KeyFrame kfu1 = new KeyFrame(Duration.ZERO, kvu1);
 
 			KeyValue kvd0 = new KeyValue(dline.endXProperty(), 0, Interpolator.LINEAR);
 			KeyFrame kfd0 = new KeyFrame(Duration.seconds(0.3), kvd0);
 
-			KeyValue kvd1 = new KeyValue(dline.endXProperty(), this.SUBMANUWIDTH);
+			KeyValue kvd1 = new KeyValue(dline.endXProperty(), this.SUBMENUWIDTH);
 			KeyFrame kfd1 = new KeyFrame(Duration.ZERO, kvd1);
 
 			KeyValue kvp0 = new KeyValue(submanu.prefHeightProperty(), 0, Interpolator.LINEAR);
@@ -281,13 +294,13 @@ public class EditDeckController {
 		KeyValue kvu0 = new KeyValue(uline.endXProperty(), 0, Interpolator.LINEAR);
 		KeyFrame kfu0 = new KeyFrame(Duration.seconds(0.3), kvu0);
 
-		KeyValue kvu1 = new KeyValue(uline.endXProperty(), this.SUBMANUWIDTH);
+		KeyValue kvu1 = new KeyValue(uline.endXProperty(), this.SUBMENUWIDTH);
 		KeyFrame kfu1 = new KeyFrame(Duration.ZERO, kvu1);
 
 		KeyValue kvd0 = new KeyValue(dline.endXProperty(), 0, Interpolator.LINEAR);
 		KeyFrame kfd0 = new KeyFrame(Duration.seconds(0.3), kvd0);
 
-		KeyValue kvd1 = new KeyValue(dline.endXProperty(), this.SUBMANUWIDTH);
+		KeyValue kvd1 = new KeyValue(dline.endXProperty(), this.SUBMENUWIDTH);
 		KeyFrame kfd1 = new KeyFrame(Duration.ZERO, kvd1);
 
 		KeyValue kvp0 = new KeyValue(submanu.prefHeightProperty(), 0, Interpolator.LINEAR);
