@@ -3,10 +3,10 @@ package sharkindream.gamecharacter;
 public enum Type {
 
 	None(0, "None", "#514f4f"),
-	Fire(1, "Fire", "#EE6557"),
-	Water(2, "Water", "#3c40c6"),
-	Leaf(3, "Leaf", "#05c46b"),
-	Light(4, "Light", "#ffdd59"),
+	Fire(1, "Fire", "#ee6557"),
+	Water(2, "Water", "#5b7ccc"),
+	Leaf(3, "Leaf", "#5bcc80"),
+	Light(4, "Light", "#f09613"),
 	Dark(5, "Dark", "#150821");
 
 	private int id;

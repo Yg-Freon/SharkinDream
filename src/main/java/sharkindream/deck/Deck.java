@@ -48,7 +48,7 @@ public class Deck implements Serializable{
 			e.printStackTrace();
 			try {
 				File dir = new File("sav\\deck");
-				dir.mkdir();
+				dir.mkdirs();
 				File file = new File(PATH);
 				PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
 				this.deckID = deckid;
@@ -65,9 +65,19 @@ public class Deck implements Serializable{
 	}
 
 	public void saveDecktojason() {
+
 		Gson gson = new Gson();
-		gson.toJson(this);
-		System.out.println(gson.toJson(this));
+		String PATH = "sav\\deck\\Deck" + this.deckID + ".json";
+		try {
+			File file = new File(PATH);
+			PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+			pw.println(gson.toJson(this));
+			pw.close();
+		} catch (IOException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
 	}
 
 	public int getDeckID() {

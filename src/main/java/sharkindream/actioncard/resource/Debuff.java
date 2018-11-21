@@ -1,24 +1,19 @@
-package sharkindream.gamecharacter.minion.classtype;
+package sharkindream.actioncard.resource;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Paint;
 
-public class None extends Prototype{
-
-	//プレイヤーのステータス
-	//物理攻撃↓ 物理防御↓ 魔法攻撃↓ 魔法防御↓ HP60 MP無限
-	//状態異常の確率up
+public class Debuff extends Resource{
 
 
-	public final static String name = "None";
-	public final static String comment = "None";
 
 	Canvas canvas = new Canvas(50, 50);
 	GraphicsContext g;
 
-	public None() {
-		super(0.7F, 0.7F, 0.7F, 0.7F, 1.0F, 1.0F);
+	public Debuff() {
+		super(new Canvas(50,50));
+		canvas = super.canvas;
 	}
 
 	private void draw(Paint color) {
@@ -46,21 +41,8 @@ public class None extends Prototype{
 		return canvas;
 	}
 
-	@Override
 	public Canvas geticon(Paint color) {
 		draw(color);
 		return canvas;
-	}
-
-	@Override
-	public String getname() {
-		// TODO 自動生成されたメソッド・スタブ
-		return this.name;
-	}
-
-	@Override
-	public String getcomment() {
-		// TODO 自動生成されたメソッド・スタブ
-		return this.comment;
 	}
 }

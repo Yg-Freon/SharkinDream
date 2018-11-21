@@ -113,10 +113,6 @@ public class TitleController {
         }, null);
 
 
-
-
-
-
 		startimeline.getKeyFrames().add(kfc00);
 		startimeline.getKeyFrames().add(kfc01);
 		startimeline.getKeyFrames().add(kfc0o0);
@@ -131,9 +127,6 @@ public class TitleController {
 		startimeline.getKeyFrames().add(kfs1);
 
 		startimeline.getKeyFrames().add(kfplaygame);
-
-
-
 
 
 		startimeline.play();
@@ -157,7 +150,7 @@ public class TitleController {
 	}
 
 	private void playanimation() {
-		Timeline logotimeline1 = new Timeline();
+		Timeline logotimeline = new Timeline();
 
 		Interpolator interpolator = Interpolator.SPLINE(0.7, 0.1, 0.3, 0.9);
 
@@ -294,49 +287,49 @@ public class TitleController {
 
 
 
-        logotimeline1.getKeyFrames().add( kft0 );
-        logotimeline1.getKeyFrames().add( kft1 );
-        logotimeline1.getKeyFrames().add( kfb0 );
-        logotimeline1.getKeyFrames().add( kfb1 );
-        logotimeline1.getKeyFrames().add( kfd0 );
-        logotimeline1.getKeyFrames().add( kfd1 );
-        logotimeline1.getKeyFrames().add( kfdo0 );
-        logotimeline1.getKeyFrames().add( kfdo1 );
-        logotimeline1.getKeyFrames().add( kfdo2 );
-        logotimeline1.getKeyFrames().add( kfdo3 );
+        logotimeline.getKeyFrames().add( kft0 );
+        logotimeline.getKeyFrames().add( kft1 );
+        logotimeline.getKeyFrames().add( kfb0 );
+        logotimeline.getKeyFrames().add( kfb1 );
+        logotimeline.getKeyFrames().add( kfd0 );
+        logotimeline.getKeyFrames().add( kfd1 );
+        logotimeline.getKeyFrames().add( kfdo0 );
+        logotimeline.getKeyFrames().add( kfdo1 );
+        logotimeline.getKeyFrames().add( kfdo2 );
+        logotimeline.getKeyFrames().add( kfdo3 );
 
-        logotimeline1.getKeyFrames().add( kflh0 );
-        logotimeline1.getKeyFrames().add( kflh1 );
-        logotimeline1.getKeyFrames().add( kfco0 );
-        logotimeline1.getKeyFrames().add( kfco1 );
+        logotimeline.getKeyFrames().add( kflh0 );
+        logotimeline.getKeyFrames().add( kflh1 );
+        logotimeline.getKeyFrames().add( kfco0 );
+        logotimeline.getKeyFrames().add( kfco1 );
 
-        logotimeline1.getKeyFrames().add( kftt0 );
-        logotimeline1.getKeyFrames().add( kftt1 );
-        logotimeline1.getKeyFrames().add( kfbt0 );
-        logotimeline1.getKeyFrames().add( kfbt1 );
-        logotimeline1.getKeyFrames().add( kftt2 );
-        logotimeline1.getKeyFrames().add( kftt3 );
-        logotimeline1.getKeyFrames().add( kfbt2 );
-        logotimeline1.getKeyFrames().add( kfbt3 );
-        logotimeline1.getKeyFrames().add( kflh2 );
-        logotimeline1.getKeyFrames().add( kflh3 );
-        logotimeline1.getKeyFrames().add( kflo0 );
-        logotimeline1.getKeyFrames().add( kflo1 );
+        logotimeline.getKeyFrames().add( kftt0 );
+        logotimeline.getKeyFrames().add( kftt1 );
+        logotimeline.getKeyFrames().add( kfbt0 );
+        logotimeline.getKeyFrames().add( kfbt1 );
+        logotimeline.getKeyFrames().add( kftt2 );
+        logotimeline.getKeyFrames().add( kftt3 );
+        logotimeline.getKeyFrames().add( kfbt2 );
+        logotimeline.getKeyFrames().add( kfbt3 );
+        logotimeline.getKeyFrames().add( kflh2 );
+        logotimeline.getKeyFrames().add( kflh3 );
+        logotimeline.getKeyFrames().add( kflo0 );
+        logotimeline.getKeyFrames().add( kflo1 );
 
-        logotimeline1.getKeyFrames().add( kfix0 );
-        logotimeline1.getKeyFrames().add( kfix1 );
-        logotimeline1.getKeyFrames().add( kfso0 );
-        logotimeline1.getKeyFrames().add( kfso1 );
-        logotimeline1.getKeyFrames().add( kfsx0 );
-        logotimeline1.getKeyFrames().add( kfsx1 );
+        logotimeline.getKeyFrames().add( kfix0 );
+        logotimeline.getKeyFrames().add( kfix1 );
+        logotimeline.getKeyFrames().add( kfso0 );
+        logotimeline.getKeyFrames().add( kfso1 );
+        logotimeline.getKeyFrames().add( kfsx0 );
+        logotimeline.getKeyFrames().add( kfsx1 );
 
-        logotimeline1.getKeyFrames().add( kfbo0 );
-        logotimeline1.getKeyFrames().add( kfbo1 );
-        logotimeline1.getKeyFrames().add( kfbd0 );
-        logotimeline1.getKeyFrames().add( kfbd1 );
+        logotimeline.getKeyFrames().add( kfbo0 );
+        logotimeline.getKeyFrames().add( kfbo1 );
+        logotimeline.getKeyFrames().add( kfbd0 );
+        logotimeline.getKeyFrames().add( kfbd1 );
 
 
-        logotimeline1.play();
+        logotimeline.play();
 	}
 
 

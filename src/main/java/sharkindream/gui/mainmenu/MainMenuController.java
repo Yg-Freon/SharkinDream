@@ -1,4 +1,4 @@
-package sharkindream.gui.mainmanu;
+package sharkindream.gui.mainmenu;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -28,7 +28,7 @@ import sharkindream.network.event.OnConnectedServerHandler;
 import sharkindream.network.event.OnRunServerHandler;
 import sharkindream.network.server.Server;
 
-public class MainManuController {
+public class MainMenuController {
 
 
 	@FXML
@@ -52,6 +52,9 @@ public class MainManuController {
 	@FXML
 	private AnchorPane menulistpane;
 
+	@FXML
+	private Text errortext;
+
 
 	@FXML
 	public TextField serverport;
@@ -65,6 +68,7 @@ public class MainManuController {
 	private final int Radius = 90;
 	private final int Anglebody = 65;
 	private OnMoveScreenHandler listener;
+	private static boolean playanimationflag = true;
 
 
 	@FXML
@@ -142,7 +146,13 @@ public class MainManuController {
 		minionscircle.scaleXProperty().add( 1 +  (Math.cos(Math.toRadians(rotatepane.rotateProperty().get() + 270)) * 0.3  ) );
 
 
-		playstartanimation();
+		if(playanimationflag) {
+			playstartanimation();
+			playanimationflag = false;
+		}
+		else {
+			skipanimation();
+		}
 
 	}
 
@@ -185,6 +195,41 @@ public class MainManuController {
 		timeline.getKeyFrames().add(kf);
 
 		return timeline;
+	}
+
+	//-------------
+	private void skipanimation() {
+		((AnchorPane)((AnchorPane)connectpane.getChildren().get(0)).getChildren().get(1)).opacityProperty().set(1);
+		((AnchorPane)((AnchorPane)connectpane.getChildren().get(1)).getChildren().get(1)).opacityProperty().set(1);
+		showpane.translateXProperty().set(25);
+		backline.opacityProperty().set(0);
+		((Line)mainmanutagpane.getChildren().get(0)).endXProperty().set(350);
+		((Circle)mainmanutagpane.getChildren().get(1)).translateXProperty().set(350);
+		((Text)mainmanutagpane.getChildren().get(2)).translateYProperty().set(0);
+		showpane.rotateProperty().set(Anglebody);
+
+		((AnchorPane)playcircle.getChildren().get(0)).scaleXProperty().set(1 +  (Math.cos(Math.toRadians(0 + 0)) * 0.4));
+		((AnchorPane)playcircle.getChildren().get(0)).scaleYProperty().set(1 +  (Math.cos(Math.toRadians(0 + 0)) * 0.4));
+		((AnchorPane)deckcircle.getChildren().get(0)).scaleXProperty().set(1 +  (Math.cos(Math.toRadians(0 - 90)) * 0.4 ));
+		((AnchorPane)deckcircle.getChildren().get(0)).scaleYProperty().set(1 +  (Math.cos(Math.toRadians(0 - 90)) * 0.4 ));
+		((AnchorPane)exitcircle.getChildren().get(0)).scaleXProperty().set( 1 +  (Math.cos(Math.toRadians(0 + 180)) * 0.4 ));
+		((AnchorPane)exitcircle.getChildren().get(0)).scaleYProperty().set(1 +  (Math.cos(Math.toRadians(0 + 180)) * 0.4 ));
+		((AnchorPane)minionscircle.getChildren().get(0)).scaleXProperty().set(1 +  (Math.cos(Math.toRadians(0 + 90)) * 0.4 ));
+		((AnchorPane)minionscircle.getChildren().get(0)).scaleYProperty().set( 1 +  (Math.cos(Math.toRadians(0 + 90)) * 0.4 ));
+
+		skipCircleanimetion(minionscircle);
+		skipCircleanimetion(deckcircle);
+		skipCircleanimetion(playcircle);
+		skipCircleanimetion(exitcircle);
+	}
+
+	private void skipCircleanimetion(AnchorPane targetcircle) {
+
+		targetcircle.setVisible(true);
+		((Text)((TilePane)((AnchorPane)targetcircle.getChildren().get(0)).getChildren().get(1)).getChildren().get(0)).opacityProperty().set(1);
+		targetcircle.translateXProperty().set(0);
+		targetcircle.translateYProperty().set(0);
+		((Circle)((AnchorPane)targetcircle.getChildren().get(0)).getChildren().get(0)).fillProperty().set(Paint.valueOf(Color.web("#383838", 1).toString()));
 	}
 
 	private Timeline getPlayMenuTimeline() {
@@ -562,6 +607,11 @@ public class MainManuController {
 		onClickedMoveEditDeck();
 	}
 
+	@FXML
+	private void onClickCreateMinion() {
+		onClickedCreateMinion();
+	}
+
 
 	//リスナ登録
 	public void addMoveScreenListener(OnMoveScreenHandler handler) {
@@ -575,6 +625,12 @@ public class MainManuController {
 	private void onClickedMoveEditDeck() {
 		if(listener != null) {
 			listener.onMoveEditDeckScreen();
+		}
+	}
+
+	private void onClickedCreateMinion() {
+		if(listener != null) {
+			listener.onMoveCreateMinionScreen();
 		}
 	}
 }

@@ -8,12 +8,13 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.List;
 
 import sharkindream.gui.gamescreen.GameScreenController;
 import sharkindream.myprofile.Profile;
-import sharkindream.network.stream.playerstream.CharacterStatusStream;
 import sharkindream.network.stream.playerstream.Guest;
 import sharkindream.network.stream.playerstream.GuestStream;
+import sharkindream.network.stream.playerstream.PlayerStatus;
 
 public class ClientGamePlayFlow {
 
@@ -23,7 +24,7 @@ public class ClientGamePlayFlow {
 
 	private Socket cSocket;
 	private GuestStream guestinfo;
-	private CharacterStatusStream playerinfo;
+	private List<PlayerStatus> playerinfo;
 
 	ClientGamePlayFlow(Socket csocket){
 		this.cSocket = csocket;
@@ -103,17 +104,51 @@ public class ClientGamePlayFlow {
 
 
 	private void gameplaymanu() {
-		System.out.println("client:gamestart");
+
+		//初期化
+		try {
+			ObjectInputStream readerPlayerStatus = new ObjectInputStream(cSocket.getInputStream());
+			playerinfo = (List<PlayerStatus>) readerPlayerStatus.readObject();
+
+		} catch (IOException | ClassNotFoundException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+		//画面更新
+
 		isplaying = true;
 		while(isplaying) {
+
+			//自分の攻撃ターンか確認
+			boolean canAttack = false;
 			try {
 				ObjectInputStream readerPlayerStatus = new ObjectInputStream(cSocket.getInputStream());
-				playerinfo = (CharacterStatusStream) readerPlayerStatus.readObject();
+				canAttack = (boolean) readerPlayerStatus.readObject();
 
 			} catch (IOException | ClassNotFoundException e) {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
 			}
+			//true なら攻撃 手札補充
+			if(canAttack) {
+				//攻撃
+				try {
+					ObjectOutputStream writerGuestStatus = new ObjectOutputStream(cSocket.getOutputStream());
+					writerGuestStatus.writeObject(/* 攻撃カード 攻撃キャラ 攻撃対象*/  );
+					writerGuestStatus.flush();
+				} catch (IOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}
+
+
+			//自分の防御ターンか確認
+				//trueなら防御
+			//ターン終了
+
+
+
 		}
 
 

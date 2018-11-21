@@ -3,16 +3,24 @@ package sharkindream.gamecharacter;
 public abstract class GameCharacter {
 
 
-	public int strength  = 5;
-	public int vitality = 5;
-	public int intelligence = 5;
-	public int mind = 5;
-	public int HP = 5;
-	public int MP = 5;
+	public enum Status{
+		Strength,
+		Vitality,
+		Intelligence,
+		Mind,
+		HP,
+		MP;
+	}
 
-	public Type type = Type.None;
-	private StatusAilmen statusalimen = StatusAilmen.None;
-	private boolean isAlive = true;
+	protected int strength  = 5;
+	protected int vitality = 5;
+	protected int intelligence = 5;
+	protected int mind = 5;
+	protected int HP = 5;
+	protected int MP = 5;
+
+	protected Type type = Type.None;
+	protected StatusAilmen statusalimen = StatusAilmen.None;
 
 	public GameCharacter() {
 
@@ -63,21 +71,18 @@ public abstract class GameCharacter {
 		return status;
 	}
 
-	public void hitattack() {
-		//ダメージ処理
+	public void setstatuslist(int[] statuslist) {
+		this.strength = statuslist[0];
+		this.vitality = statuslist[1];
+		this.intelligence = statuslist[2];
+		this.mind = statuslist[3];
+		this.HP = statuslist[4];
+		this.MP = statuslist[5];
 	}
 
-	public int addDamage(int damage) {
-		this.HP -= damage;
-		if(this.HP < 1) {
-			this.HP = 0;
-			kill();
-		}
-		return this.HP;
-	}
 
-	public void kill() {
-		this.isAlive = false;
+	protected void setType(Type type_) {
+		this.type = type_;
 	}
 
 

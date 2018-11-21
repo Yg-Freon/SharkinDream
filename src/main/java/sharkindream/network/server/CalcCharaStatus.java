@@ -1,5 +1,8 @@
 package sharkindream.network.server;
 
+import sharkindream.gamecharacter.GameCharacter;
+import sharkindream.gamecharacter.GameCharacter.Status;
+import sharkindream.gamecharacter.minion.Minion;
 import sharkindream.gamecharacter.minion.MinionClass;
 import sharkindream.gamecharacter.minion.classtype.BeastTamer;
 import sharkindream.gamecharacter.minion.classtype.Bishop;
@@ -16,24 +19,13 @@ public class CalcCharaStatus {
 
 
 
-	private Prototype.Status[]  statusnamelist= {	Prototype.Status.strength,
-													Prototype.Status.vitality,
-													Prototype.Status.intelligence,
-													Prototype.Status.mind,
-													Prototype.Status.HP,
-													Prototype.Status.MP
-													};
-
-
-	public int[] calcStatuslist(int[] parameterlist, MinionClass classType) {
+	public int[] calcStatuslist(Minion minion) {
 
 		int[] status = new int[6];
-		for(int i=0; i < 6; ++i) {
-			status[i] = calcStatus(parameterlist[i], classType, statusnamelist[i]);
-		}
+		status =  calcStatus(minion);
 
 		int sumpara = 0;
-		for(int para : parameterlist) {
+		for(int para : minion.getstatuslist()) {
 			sumpara += para;
 		}
 
@@ -69,79 +61,101 @@ public class CalcCharaStatus {
 		}
 
 		return status;
+
 	}
 
 
-	public int calcStatus(int parameter, MinionClass classtype, Prototype.Status mstatus) {
 
-		float statusmult = 1.0f;
-		switch(parameter) {
+	private int[] calcStatus(Minion minion) {
 
-		case 0:
-			parameter = 1;
-			statusmult = 1.0f;	//プラス1
-			break;
-		case 1:
-			statusmult = 1.15f;
-			break;
-		case 2:
-			statusmult = 1.1f;
-			break;
-		case 3:
-			statusmult = 1.05f;
-			break;
-		case 7:
-			statusmult = 0.95f;
-			break;
-		case 8:
-			statusmult = 0.9f;
-			break;
-		case 9:
-			statusmult = 0.85f;
-			break;
-		case 10:
-			statusmult = 0.8f;
-			break;
-		default:
-			statusmult = 1.0f;
-			break;
+		float[] statusmult = {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f};
+		int count = 0;
+		for(int parameter: minion.getstatuslist()) {
 
+			switch(parameter) {
+
+			case 0:
+				statusmult[count] = 1.0f / 2.0f;	//プラス1
+				break;
+			case 1:
+				statusmult[count] = 1.0f / 1.9f;
+				break;
+			case 2:
+				statusmult[count] = 1.0f / 1.75f;
+				break;
+			case 3:
+				statusmult[count] = 1.0f / 1.55f;
+				break;
+			case 4:
+				statusmult[count] = 1.0f / 1.3f;
+				break;
+			case 5:
+				statusmult[count] = 1.0f;
+				break;
+			case 6:
+				statusmult[count] = 1.3f;
+				break;
+			case 7:
+				statusmult[count] = 1.55f;
+				break;
+			case 8:
+				statusmult[count] = 1.75f;
+				break;
+			case 9:
+				statusmult[count] = 1.9f;
+				break;
+			case 10:
+				statusmult[count] = 2.0f;
+				break;
+			default:
+				statusmult[count] = 0.1f;
+				break;
+
+			}
+
+			count += 1;
 		}
 
-		int status = (int) (parameter * statusmult * getstatus(classtype, mstatus) * 30);
+		int status[] = new int[6];
 
-		//int status = (int) ((1 / (Math.pow(Math.E , -(parameter - 5) * 2) + 1) + 0.5) * getstatus(classtype, mstatus))  * 130;
 
-		//int status = (int) (((Math.tanh((parameter - 5) /2) + 1)/2 + 0.5) * getstatus(classtype, mstatus) * 300) ;
+		status[0] = (int)(statusmult[0] * getstatus(minion.getMinionClass(), Status.Strength) * 150);
+		status[1] = (int)(statusmult[1] * getstatus(minion.getMinionClass(), Status.Vitality) * 150);
+		status[2] = (int)(statusmult[2] * getstatus(minion.getMinionClass(), Status.Intelligence) * 150);
+		status[3] = (int)(statusmult[3] * getstatus(minion.getMinionClass(), Status.Mind) * 150);
+		status[4] = (int)(statusmult[4] * getstatus(minion.getMinionClass(), Status.HP) * 150);
+		status[5] = (int)(statusmult[5] * getstatus(minion.getMinionClass(), Status.MP) * 150);
 		return status;
 	}
 
-	private float getstatus(MinionClass classtype, Prototype.Status status ) {
+
+
+	private float getstatus(MinionClass classtype, GameCharacter.Status status) {
 
 		Prototype chara = new None();
-		switch(classtype.getid()) {
-		case 0:
+		switch(classtype) {
+		case None:
 			chara = new None();
 			break;
-		case 1:
+		case Soldier:
 			chara = new Soldier();
 			break;
-		case 2:
+		case Shielder:
 			chara = new Shielder();
 			break;
-		case 3:
+		case Witch:
 			chara = new Witch();
 			break;
-		case 4:
+		case Sage:
 			chara = new Sage();
 			break;
-		case 5:
+		case Bishop:
 			chara = new Bishop();
 			break;
-		case 6:
+		case MadScientist:
 			chara = new MadScientist();
 			break;
-		case 7:
+		case BeastTamer:
 			chara = new BeastTamer();
 			break;
 		}

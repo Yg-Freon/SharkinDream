@@ -1,23 +1,22 @@
 package sharkindream.gamecharacter.minion.classtype;
 
+import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Paint;
+import sharkindream.gamecharacter.GameCharacter.Status;
+
 public abstract class Prototype {
 
 
-	public enum Status{
-		strength,
-		vitality,
-		intelligence,
-		mind,
-		HP,
-		MP;
-	}
+	protected String name = "";
+	protected String comment = "";
 
-	public float mstrength = 1.0f;
-	public float mvitality = 1.0f;
-	public float mintelligence = 1.0f;
-	public float mmind = 1.0f;
-	public float mHP = 1.0f;
-	public float mMP = 1.0f;
+
+	protected float mstrength = 1.0f;
+	protected float mvitality = 1.0f;
+	protected float mintelligence = 1.0f;
+	protected float mmind = 1.0f;
+	protected float mHP = 1.0f;
+	protected float mMP = 1.0f;
 
 
 	public Prototype(float mstr, float mvit, float mint, float mmin, float mhp, float mmp) {
@@ -31,13 +30,13 @@ public abstract class Prototype {
 
 	public float getstatusmult(Status status) {
 		switch(status) {
-		case strength:
+		case Strength:
 			return this.mstrength;
-		case vitality:
+		case Vitality:
 			return this.mvitality;
-		case intelligence:
+		case Intelligence:
 			return this.mintelligence;
-		case mind:
+		case Mind:
 			return this.mmind;
 		case HP:
 			return this.mHP;
@@ -47,5 +46,10 @@ public abstract class Prototype {
 			return this.mHP;
 		}
 	}
+
+	public abstract String getname();
+	public abstract Canvas geticon(Paint color);
+	public abstract String getcomment();
+
 
 }

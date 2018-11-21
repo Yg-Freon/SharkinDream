@@ -18,10 +18,10 @@ import javafx.scene.shape.SVGPath;
 import javafx.scene.text.Text;
 import sharkindream.gui.gamescreen.playerstatus.PlayerStatusController;
 import sharkindream.network.event.OnUpdateGuestHandler;
-import sharkindream.network.stream.playerstream.CharacterStatusStream;
 import sharkindream.network.stream.playerstream.Guest;
 import sharkindream.network.stream.playerstream.GuestStream;
 import sharkindream.network.stream.playerstream.PlayCharacter;
+import sharkindream.network.stream.playerstream.PlayerStatus;
 
 public class New2GameScreenController{
 
@@ -39,7 +39,6 @@ public class New2GameScreenController{
 	public AnchorPane playerboxaxis;
 
 	private Map<Integer, Guest> guestlist = new HashMap<Integer, Guest>();
-	private Map<Integer, PlayCharacter[]> memberlist = new HashMap<>();
 
 	private double multiscroll;
 	private boolean isactive = false;
@@ -99,8 +98,12 @@ public class New2GameScreenController{
 
 
 
-	public void updatePlayerInfo(CharacterStatusStream Charast) {
+	public void updatePlayerInfo(List<PlayerStatus> Charast) {
 
+		for(PlayerStatus player : Charast) {
+
+
+		}
 		for(Map.Entry<Integer, PlayCharacter[]> memberset: Charast.getmemberlist().entrySet() ){
 
 

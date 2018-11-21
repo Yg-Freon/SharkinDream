@@ -6,10 +6,10 @@
    <children>
       <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="iconphysical" layoutX="14.0" layoutY="39.0" prefHeight="50.0" prefWidth="50.0" />
-            <AnchorPane fx:id="iconmagical" layoutX="75.0" layoutY="39.0" prefHeight="50.0" prefWidth="50.0" />
-            <AnchorPane fx:id="icondebuff" layoutX="14.0" layoutY="100.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: black;" />
-            <AnchorPane fx:id="iconheal" layoutX="75.0" layoutY="100.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: black;" />
+            <AnchorPane fx:id="iconphysical" layoutX="14.0" layoutY="39.0" onMouseClicked="#onClickPhysicalIcon" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="iconmagical" layoutX="75.0" layoutY="39.0" onMouseClicked="#onClickMagicalIcon" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="icondebuff" layoutX="14.0" layoutY="100.0" onMouseClicked="#onClickDebuffIcon" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="iconheal" layoutX="75.0" layoutY="100.0" onMouseClicked="#onClickHealIcon" prefHeight="50.0" prefWidth="50.0" />
          </children>
       </AnchorPane>
    </children>

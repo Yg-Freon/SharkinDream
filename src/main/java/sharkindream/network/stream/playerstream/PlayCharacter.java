@@ -7,26 +7,62 @@ import sharkindream.gamecharacter.minion.MinionClass;
 public class PlayCharacter {
 
 	/*操作主*/
-	public int id;
+	private int id;
 	/*操作id 0:プレイヤ 1,2:ミニオン*/
-	public int index;
+	private int index;
 
 	/*属性*/
-	public Type type;
+	private Type type;
 
 	/*キャラクタークラス*/
-	public MinionClass characterclass;
+	private MinionClass characterclass;
 
 	/*ステータス実数値*/
-	public int[] status = new int[6];
+	private int[] status = new int[6];
 
 	/*能力補正*/
-	public int[] statuscorrection = {0, 0, 0, 0};
+	private int[] statuscorrection = {0, 0, 0, 0};
 
 	/*状態異常*/
-	public StatusAilmen stailmen = StatusAilmen.None;
+	private StatusAilmen stailmen = StatusAilmen.None;
 
 	/*死亡*/
-	public boolean isdead = false;
+	private boolean isdead = false;
+
+
+
+	public int getid() {
+		return this.id;
+	}
+
+	public void setid(int id_) {
+		this.id = id_;
+	}
+
+
+	public int[] getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(int[] status_) {
+		this.status = status_;
+	}
+
+	public MinionClass getCharacterclass() {
+		return characterclass;
+	}
+
+	public void setCharacterclass(MinionClass characterclass) {
+		this.characterclass = characterclass;
+	}
+
+
+	public void addDamege(int damage){
+		this.status[5] -= damage;
+		if(this.status[5] < 1) {
+			this.isdead = true;
+		}
+	}
+
 
 }

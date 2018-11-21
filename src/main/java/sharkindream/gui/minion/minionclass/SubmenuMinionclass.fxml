@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.minion.minionclass.SubmenuMinionclassController">
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="soldiericon" layoutX="10.0" layoutY="81.0" onMouseClicked="#onClickSoldier" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="shieldericon" layoutX="70.0" layoutY="81.0" onMouseClicked="#onClickShielder" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="witchicon" layoutX="130.0" layoutY="81.0" onMouseClicked="#onClickWitch" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="sageicon" layoutX="190.0" layoutY="81.0" onMouseClicked="#onClickSage" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="bishopicon" layoutX="45.0" layoutY="169.0" onMouseClicked="#onClickBichop" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="madscientisticon" layoutX="105.0" layoutY="169.0" onMouseClicked="#onClickMadscientist" prefHeight="50.0" prefWidth="50.0" />
+            <AnchorPane fx:id="beasttamericon" layoutX="165.0" layoutY="169.0" onMouseClicked="#onClickBeastTamer" prefHeight="50.0" prefWidth="50.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

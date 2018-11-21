@@ -8,11 +8,12 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.List;
 
 import sharkindream.network.client.ByteChanger;
-import sharkindream.network.stream.playerstream.CharacterStatusStream;
 import sharkindream.network.stream.playerstream.Guest;
 import sharkindream.network.stream.playerstream.GuestStream;
+import sharkindream.network.stream.playerstream.PlayerStatus;
 
 public class SrvThread extends Thread{
 
@@ -107,11 +108,23 @@ public class SrvThread extends Thread{
 	}
 
 
-	public void sendPlayerStatus(CharacterStatusStream charast) {
+	public void sendPlayeresStatus(List<PlayerStatus> playerlist) {
 
 		try {
 			ObjectOutputStream writerGuestStatus = new ObjectOutputStream(soc.getOutputStream());
-			writerGuestStatus.writeObject(charast);
+			writerGuestStatus.writeObject(playerlist);
+			writerGuestStatus.flush();
+		} catch (IOException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+	}
+
+	public void sendCanAttack(Guest id, PlayerStatus player) {
+
+		try {
+			ObjectOutputStream writerGuestStatus = new ObjectOutputStream(soc.getOutputStream());
+			writerGuestStatus.writeObject(id.isequal(guest));
 			writerGuestStatus.flush();
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
@@ -145,6 +158,7 @@ public class SrvThread extends Thread{
 		gst.updateGuestByID(guest.playerID, guest);
 
 	}
+
 
 
 }

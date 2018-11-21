@@ -1,4 +1,4 @@
-package sharkindream.gui.mainmanu.playmanu;
+package sharkindream.gui.mainmenu.playmanu;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

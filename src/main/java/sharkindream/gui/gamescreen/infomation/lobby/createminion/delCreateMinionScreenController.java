@@ -13,7 +13,7 @@ import javafx.scene.shape.SVGPath;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
-public class CreateMinionScreenController {
+public class delCreateMinionScreenController {
 
 	@FXML
 	public HBox choiceclass;

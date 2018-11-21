@@ -6,6 +6,7 @@ import java.net.ServerSocket;
 import javafx.concurrent.Task;
 import sharkindream.network.event.OnRunServerHandler;
 import sharkindream.network.event.OnUpdateGuestHandler;
+import sharkindream.network.event.OnUpdatePlayerHandler;
 
 public class Server extends Task<Object>{
 
@@ -33,24 +34,24 @@ public class Server extends Task<Object>{
 			GameFlow gameflow = new GameFlow();
 
 			GameFlow.setUpdateHandler(new OnUpdateGuestHandler());
-			
-			
+			gameflow.addUpdatePlayerHandler(new OnUpdatePlayerHandler());
+
 			//ロビーメニュー
 			gameflow.onlobbymenu(sSocket);
+
 			//ゲーム開始
-			gameflow.gameStart();
+			//ステータス割り振り
+			gameflow.gameInit();
+			//手札配布
+			gameflow.inithand();
 
+			//ゲームスタート
+			boolean roopflag = true;
+			while(roopflag) {
+				roopflag = gameflow.playGame();
+			}
 
-
-			//if everyone ready => gamestart
-			//メンバーのステータス初期化
-			//メンバーにカード割り当て
-
-			//while ゲームの流れ
-
-
-
-
+			//終わり
 
 		}catch(Exception e) {
 			e.printStackTrace();

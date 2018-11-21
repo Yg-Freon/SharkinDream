@@ -13,7 +13,10 @@ public interface OnMoveScreenIF extends EventListener{
 
 	public void onMoveEditDeckScreen();
 
+	public void onMoveCreateMinionScreen();
+
 	public void onMoveClientGameScreen(ClientGamePlayFlow cflow);
 
 	public void onSwitchInfomationScreen(AnchorPane infoscreen);
+
 }

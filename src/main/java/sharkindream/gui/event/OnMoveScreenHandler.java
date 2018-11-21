@@ -6,8 +6,10 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import sharkindream.Main;
+import sharkindream.gui.deck.EditDeckController;
 import sharkindream.gui.gamescreen.GameScreenController;
-import sharkindream.gui.mainmanu.MainManuController;
+import sharkindream.gui.mainmenu.MainMenuController;
+import sharkindream.gui.minion.CreateMinionController;
 import sharkindream.gui.title.TitleController;
 import sharkindream.network.client.ClientGamePlayFlow;
 
@@ -21,7 +23,7 @@ public class OnMoveScreenHandler implements OnMoveScreenIF{
 		AnchorPane title;
 		try {
 			title = (AnchorPane)titlefxml.load();
-			((TitleController)titlefxml.getController()).addMoveScreenListener(new OnMoveScreenHandler());
+			((TitleController)titlefxml.getController()).addMoveScreenListener(this);
 			((TitleController)titlefxml.getController()).readyanimation();
 			Main.switchMainScreen(title);
 		} catch (IOException e) {
@@ -35,10 +37,10 @@ public class OnMoveScreenHandler implements OnMoveScreenIF{
 	public void onMoveMainManuScreen() {
 		AnchorPane editscreen ;
 
-		FXMLLoader editfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/mainmanu/MainManu.fxml"));
+		FXMLLoader editfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/mainmenu/MainMenu.fxml"));
 		try {
 			editscreen = (AnchorPane)editfxml.load();
-			((MainManuController)editfxml.getController()).addMoveScreenListener(this);
+			((MainMenuController)editfxml.getController()).addMoveScreenListener(this);
 			Main.switchMainScreen(editscreen);
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
@@ -54,12 +56,30 @@ public class OnMoveScreenHandler implements OnMoveScreenIF{
 		FXMLLoader editfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/deck/EditDeck.fxml"));
 		try {
 			editscreen = (AnchorPane)editfxml.load();
+			((EditDeckController)editfxml.getController()).addMoveScreenListener(this);
 			Main.switchMainScreen(editscreen);
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 	}
+
+
+	@Override
+	public void onMoveCreateMinionScreen() {
+		AnchorPane createscreen ;
+
+		FXMLLoader createfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/minion/CreateMinion.fxml"));
+		try {
+			createscreen = (AnchorPane)createfxml.load();
+			((CreateMinionController)createfxml.getController()).addMoveScreenListener(this);
+			Main.switchMainScreen(createscreen);
+		} catch (IOException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+	}
+
 
 	@Override
 	public void onMoveClientGameScreen(ClientGamePlayFlow cflow) {

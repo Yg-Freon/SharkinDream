@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-size: 100%; -fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.mainmanu.MainManuController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-size: 100%; -fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.mainmenu.MainMenuController">
    <children>
       <TilePane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -368,7 +368,7 @@
                                                                   <Font size="28.0" />
                                                                </font>
                                                             </Text>
-                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onBuild" prefHeight="20.0" prefWidth="20.0">
+                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onClickCreateMinion" prefHeight="20.0" prefWidth="20.0">
                                                                <children>
                                                                   <SVGPath content="M 0 0 L 15 20 L 0 40" fill="TRANSPARENT" stroke="#f4f4f4" strokeWidth="1.2" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
                                                                </children>
@@ -382,17 +382,12 @@
                                                       <SVGPath content="M0,0 L 450 0 L 450 120 L 0 120 Z" disable="true" fill="TRANSPARENT" layoutX="10.0" layoutY="10.0" stroke="#383838" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
-                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client" AnchorPane.topAnchor="15.0">
+                                                            <Text disable="true" fill="#f4f4f4" layoutX="15.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show" AnchorPane.topAnchor="15.0">
                                                                <font>
                                                                   <Font size="28.0" />
                                                                </font>
                                                             </Text>
-                                                            <TextField fx:id="serveraddress14" layoutX="15.0" layoutY="75.0" prefHeight="50.0" prefWidth="400.0" promptText="IP:Port" style="-fx-background-color: #f4f4f4;" AnchorPane.topAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="25.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onJoin" prefHeight="20.0" prefWidth="20.0">
+                                                            <AnchorPane layoutX="420.0" layoutY="50.0" onMouseClicked="#onClickCreateMinion" prefHeight="20.0" prefWidth="20.0">
                                                                <children>
                                                                   <SVGPath content="M 0 0 L 15 20 L 0 40" fill="TRANSPARENT" stroke="#f4f4f4" strokeWidth="1.2" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
                                                                </children>
@@ -424,5 +419,14 @@
             </AnchorPane>
          </children>
       </TilePane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="errortext" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

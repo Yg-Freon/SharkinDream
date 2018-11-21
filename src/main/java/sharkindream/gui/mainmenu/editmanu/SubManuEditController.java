@@ -1,4 +1,4 @@
-package sharkindream.gui.mainmanu.editmanu;
+package sharkindream.gui.mainmenu.editmanu;
 
 import java.io.IOException;
 
