@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.gamescreen.infomation.lobby.selectminion.getterminion.GetterMinionController">
+   <children>
+      <TilePane alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="500.0">
+               <children>
+                  <AnchorPane layoutX="197.0" layoutY="266.0" prefHeight="200.0" prefWidth="200.0" style="-fx-view-order: 0;">
+                     <children>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="-69.0" AnchorPane.topAnchor="-122.0">
+                           <children>
+                              <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#ee6557" onMouseClicked="#onClickMinion" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" AnchorPane.leftAnchor="13.79642391204834" AnchorPane.topAnchor="20.0" />
+                              <Text fx:id="hptext" disable="true" fill="WHITE" layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HP">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="-122.0">
+                           <children>
+                              <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#5b7ccc" onMouseClicked="#onClickMinion" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                              <Text fx:id="mptext" disable="true" fill="WHITE" layoutX="17.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MP">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="-139.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#cc5cc0" onMouseClicked="#onClickMinion" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                              <Text fx:id="strtext" disable="true" fill="WHITE" layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Str">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#55a06d" onMouseClicked="#onClickMinion" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                              <Text fx:id="inttext" disable="true" fill="WHITE" layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Int">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="-70.0" AnchorPane.topAnchor="122.0">
+                           <children>
+                              <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#150821" onMouseClicked="#onClickMinion" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                              <Text fx:id="vittext" disable="true" fill="WHITE" layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vit">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="122.0">
+                           <children>
+                              <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#f09613" onMouseClicked="#onClickMinion" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                              <Text fx:id="mindtext" disable="true" fill="WHITE" layoutX="8.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                           <children>
+                              <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#f4f4f4" onMouseClicked="#onClickMinion" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                              <AnchorPane fx:id="classiconpane" disable="true" layoutX="27.0" layoutY="30.0" prefHeight="50.0" prefWidth="50.0" scaleX="2.0" scaleY="2.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="50.0" prefHeight="150.0" prefWidth="400.0">
+                     <children>
+                        <Text fill="#383838" layoutX="14.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minion:">
+                           <font>
+                              <Font size="80.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="minionnumtext" fill="#383838" layoutX="310.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="80.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="470.0" onMouseClicked="#onClickForwardMinion" prefHeight="100.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0">
+                     <children>
+                        <SVGPath content="M 0 0 L 100 100 L 0 100" disable="true" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="400.0" layoutY="470.0" onMouseClicked="#onClickNextMinion" prefHeight="100.0" prefWidth="100.0" scaleX="-1.0">
+                     <children>
+                        <SVGPath content="M 0 0 L 100 100 L 0 100" disable="true" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </TilePane>
+   </children>
+</AnchorPane>
