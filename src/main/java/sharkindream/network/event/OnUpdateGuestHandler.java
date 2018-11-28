@@ -4,7 +4,7 @@ import sharkindream.network.client.Client;
 import sharkindream.network.server.GameFlow;
 import sharkindream.network.server.SrvThread;
 import sharkindream.network.stream.playerstream.Guest;
-import sharkindream.network.stream.playerstream.GuestStream;
+import sharkindream.network.stream.playerstream.GuestListData;
 
 public class OnUpdateGuestHandler implements OnUpdateGuestIF{
 
@@ -14,9 +14,9 @@ public class OnUpdateGuestHandler implements OnUpdateGuestIF{
 	}
 
 	@Override
-	public void OnupdateGuestStatus(GuestStream guestStream) {
+	public void OnupdateGuestStatus(GuestListData guestlistdata) {
 		for(SrvThread srvth: GameFlow.getClientMember()) {
-			srvth.sendGuestStatus(guestStream);
+			srvth.sendGuestStatus(guestlistdata);
 		}
 	}
 

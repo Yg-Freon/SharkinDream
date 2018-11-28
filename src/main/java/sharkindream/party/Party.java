@@ -4,7 +4,8 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import sharkindream.gamecharacter.minion.Minion;
+import sharkindream.gamecharacter.Minion;
+
 
 public class Party implements Serializable{
 
@@ -44,6 +45,6 @@ public class Party implements Serializable{
 	}
 
 	public void setMinion(Minion minion, int index) {
-		member[index] = minion ;
+		member[index].setMinionStatus(minion);
 	}
 }

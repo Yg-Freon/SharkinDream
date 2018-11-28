@@ -5,7 +5,7 @@ import java.util.Random;
 import sharkindream.actioncard.ActionCard;
 import sharkindream.actioncard.ActionCard.Debuff;
 import sharkindream.actioncard.ActionCard.Resource;
-import sharkindream.gamecharacter.minion.MinionClass;
+import sharkindream.gamecharacter.GameCharacter.CharacterClass;
 import sharkindream.network.stream.playerstream.PlayCharacter;
 
 public class CalcCardStatus {
@@ -29,7 +29,7 @@ public class CalcCardStatus {
 			break;
 		case Heal:
 			damage = (int)(card.power.getpower() * (attacker.getStatus()[0] + attacker.getStatus()[2]) / 3) * -1;
-			if(attacker.getCharacterclass() == MinionClass.Bishop) damage = (int)(damage * 1.5f);
+			if(attacker.getCharacterClass() == CharacterClass.Bishop) damage = (int)(damage * 1.5f);
 			break;
 
 		}

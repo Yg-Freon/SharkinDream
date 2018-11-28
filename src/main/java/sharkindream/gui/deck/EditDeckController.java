@@ -128,6 +128,7 @@ public class EditDeckController {
 
 	@FXML
 	private void onClickReturnMainmenu() {
+		deck.saveDecktojason();
 		onClickedReturnMenu();
 	}
 

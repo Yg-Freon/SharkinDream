@@ -17,10 +17,9 @@ public class ReadyScreenController {
 	private OnMoveScreenHandler movescreenlistener = null;
 
 
+
 	@FXML
 	public void returnpage() {
-
-
 		setisready(false);
 		onUpdateGuestInfo(Client.getMyStatus());
 		FXMLLoader selectdeckfxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectdeck/SelectDeck.fxml"));

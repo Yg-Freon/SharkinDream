@@ -8,12 +8,12 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.List;
+import java.util.Map;
 
 import sharkindream.gui.gamescreen.GameScreenController;
 import sharkindream.myprofile.Profile;
 import sharkindream.network.stream.playerstream.Guest;
-import sharkindream.network.stream.playerstream.GuestStream;
+import sharkindream.network.stream.playerstream.GuestListData;
 import sharkindream.network.stream.playerstream.PlayerStatus;
 
 public class ClientGamePlayFlow {
@@ -23,8 +23,15 @@ public class ClientGamePlayFlow {
 	private boolean isplaying;
 
 	private Socket cSocket;
-	private GuestStream guestinfo;
-	private List<PlayerStatus> playerinfo;
+	private GuestListData guestinfo;
+	private Map<Integer, PlayerStatus> playerinfo;
+
+	public enum AttackAction{
+		None,
+		Attack,
+		Draw,
+		Rest
+	}
 
 	ClientGamePlayFlow(Socket csocket){
 		this.cSocket = csocket;
@@ -50,12 +57,14 @@ public class ClientGamePlayFlow {
 			try {
 				ObjectInputStream readerGuestStatus = new ObjectInputStream(cSocket.getInputStream());
 
-				guestinfo = (GuestStream)readerGuestStatus.readObject();
+				guestinfo = (GuestListData)readerGuestStatus.readObject();
 				setIsrecruit(!guestinfo.getIsAllReady());
 
 				//gui更新
 				//TODO:結合が密になっているので、イベントバスで処理したい
-				gamescreencontroller.updateGuestInfo(guestinfo);
+				if(gamescreencontroller != null) {
+					gamescreencontroller.updateGuestInfo(guestinfo);
+				}
 
 			} catch (IOException | ClassNotFoundException e) {
 				//全員readyしたら、サーバーからイベントをキャッチし、例外をスローしてもらう
@@ -108,12 +117,20 @@ public class ClientGamePlayFlow {
 		//初期化
 		try {
 			ObjectInputStream readerPlayerStatus = new ObjectInputStream(cSocket.getInputStream());
-			playerinfo = (List<PlayerStatus>) readerPlayerStatus.readObject();
-
-		} catch (IOException | ClassNotFoundException e) {
-			// TODO 自動生成された catch ブロック
+			playerinfo = (Map<Integer, PlayerStatus>) readerPlayerStatus.readObject();
+			if(gamescreencontroller != null) {
+				gamescreencontroller.initPlayerInfo(playerinfo);
+				gamescreencontroller.startGameAnimation();
+				while(!gamescreencontroller.isanimationfinished()) {
+					//アニメーションが終了するまで待機
+					Thread.sleep(1);
+				}
+			}
+		} catch (IOException | ClassNotFoundException | InterruptedException e) {
+			//TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
+
 		//画面更新
 
 		isplaying = true;
@@ -122,6 +139,7 @@ public class ClientGamePlayFlow {
 			//自分の攻撃ターンか確認
 			boolean canAttack = false;
 			try {
+
 				ObjectInputStream readerPlayerStatus = new ObjectInputStream(cSocket.getInputStream());
 				canAttack = (boolean) readerPlayerStatus.readObject();
 
@@ -133,9 +151,36 @@ public class ClientGamePlayFlow {
 			if(canAttack) {
 				//攻撃
 				try {
-					ObjectOutputStream writerGuestStatus = new ObjectOutputStream(cSocket.getOutputStream());
-					writerGuestStatus.writeObject(/* 攻撃カード 攻撃キャラ 攻撃対象*/  );
-					writerGuestStatus.flush();
+					if(gamescreencontroller != null) {
+						gamescreencontroller.onAttackTurn();
+					}
+
+					ObjectOutputStream writerActionResult = new ObjectOutputStream(cSocket.getOutputStream());
+					writerActionResult.writeObject(getActionResult());
+					writerActionResult.flush();
+
+					switch(getActionResult()) {
+					case Attack:
+						ObjectOutputStream writerActionCard = new ObjectOutputStream(cSocket.getOutputStream());
+						writerActionCard.writeObject(getActionCard());
+						writerActionCard.flush();
+
+						ObjectOutputStream writerAttackingMinion = new ObjectOutputStream(cSocket.getOutputStream());
+						writerAttackingMinion.writeObject(getAttackingMinion());
+						writerAttackingMinion.flush();
+
+						ObjectOutputStream writerAttackedPlayer = new ObjectOutputStream(cSocket.getOutputStream());
+						writerAttackedPlayer.writeObject(getAttackedPlayer());
+						writerAttackedPlayer.flush();
+						break;
+					case Draw:
+						break;
+					case Rest:
+						break;
+					default:
+						break;
+					}
+
 				} catch (IOException e) {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
@@ -147,12 +192,69 @@ public class ClientGamePlayFlow {
 				//trueなら防御
 			//ターン終了
 
-
-
 		}
+	}
 
+	public void onAttackAction() {
 
 	}
+
+	private AttackAction getActionResult() {
+		long t0 = System.currentTimeMillis();
+		long time = 0;
+
+		while(time < 30000) {
+			time = System.currentTimeMillis() - t0;
+
+			if(gamescreencontroller != null) {
+				if(gamescreencontroller.getAttackActoin() != AttackAction.None) {
+					return gamescreencontroller.getAttackActoin();
+				}
+			}
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+		}
+		//パス処理
+		return AttackAction.Rest;
+	}
+
+
+	private int getActionCard() {
+		int card = -1;
+		if(gamescreencontroller != null) {
+			while(card == -1) {
+				card = gamescreencontroller.getActionCard();
+				if(card != -1) return card;
+			}
+		}
+		return card;
+
+	}
+
+	private int getAttackingMinion() {
+		int minion = 0;
+		if(gamescreencontroller != null) {
+			minion = gamescreencontroller.getattakingminion();
+		}
+		return minion;
+	}
+
+	private Guest getAttackedPlayer() {
+		Guest attackedplayer = new Guest();
+		if(gamescreencontroller != null) {
+			if(gamescreencontroller.getAttackedPlayer() != null) {
+				attackedplayer = gamescreencontroller.getAttackedPlayer();
+			}
+		}
+		return attackedplayer;
+	}
+
+
+
 
 	private void setIsrecruit(boolean flag) {
 		isrecruit = flag;

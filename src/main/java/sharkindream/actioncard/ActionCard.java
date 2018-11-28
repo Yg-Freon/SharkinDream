@@ -189,4 +189,7 @@ public class ActionCard implements Serializable{
 		this.luck = Luck.l0;
 	}
 
+
+
+
 }

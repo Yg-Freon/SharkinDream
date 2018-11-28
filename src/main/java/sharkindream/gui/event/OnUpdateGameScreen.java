@@ -1,11 +1,11 @@
 package sharkindream.gui.event;
 
-import sharkindream.network.stream.playerstream.GuestStream;
+import sharkindream.network.stream.playerstream.GuestListData;
 
 public class OnUpdateGameScreen implements OnUpdateGameScreenIF{
 
 	@Override
-	public void onUpdateGuestInfo(GuestStream guestinfo) {
+	public void onUpdateGuestInfo(GuestListData guestinfo) {
 
 
 	}

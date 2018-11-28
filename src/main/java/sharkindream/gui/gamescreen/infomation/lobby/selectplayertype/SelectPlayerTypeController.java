@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.shape.SVGPath;
 import sharkindream.gamecharacter.Type;
 import sharkindream.gui.event.OnMoveScreenHandler;
-import sharkindream.gui.gamescreen.infomation.lobby.createminion.SelectMinionScreenController;
+import sharkindream.gui.gamescreen.infomation.lobby.selectminion.SelectMinionScreenController;
 import sharkindream.network.client.Client;
 
 public class SelectPlayerTypeController {
@@ -92,7 +92,7 @@ public class SelectPlayerTypeController {
 
 	private void nextScreen() {
 
-		FXMLLoader minioncreatefxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/createminion/SelectMinionScreen.fxml"));
+		FXMLLoader minioncreatefxml = new FXMLLoader(getClass().getResource("/sharkindream/gui/gamescreen/infomation/lobby/selectminion/SelectMinionScreen.fxml"));
 		AnchorPane infoscreen;
 		try {
 			infoscreen = minioncreatefxml.load();

@@ -28,7 +28,7 @@ public class Main extends Application {
 
 			mainscreen = (AnchorPane) root.getChildren().get(0);
 
-			Scene scene = new Scene(root,1100,700);
+			Scene scene = new Scene(root,1200,700);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setMinWidth(1100);

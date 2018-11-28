@@ -1,7 +1,47 @@
 package sharkindream.gamecharacter;
 
-public abstract class GameCharacter {
+import java.io.Serializable;
 
+import sharkindream.gamecharacter.classtype.Prototype;
+
+public abstract class GameCharacter implements Serializable {
+
+
+	public enum CharacterClass {
+		None,
+		Player,
+		Soldier,
+		Shielder,
+		Witch,
+		Sage,
+		Bishop,
+		MadScientist,
+		BeastTamer;
+
+	public Prototype getMinionclass() {
+		switch(this) {
+		case Player:
+			return new sharkindream.gamecharacter.classtype.Player();
+		case Soldier:
+			return new sharkindream.gamecharacter.classtype.Soldier();
+		case Shielder:
+			return new sharkindream.gamecharacter.classtype.Shielder();
+		case Witch:
+			return new sharkindream.gamecharacter.classtype.Witch();
+		case Sage:
+			return new sharkindream.gamecharacter.classtype.Sage();
+		case Bishop:
+			return new sharkindream.gamecharacter.classtype.Bishop();
+		case MadScientist:
+			return new sharkindream.gamecharacter.classtype.MadScientist();
+		case BeastTamer:
+			return new sharkindream.gamecharacter.classtype.BeastTamer();
+		default :
+			return new sharkindream.gamecharacter.classtype.None();
+
+		}
+	}
+}
 
 	public enum Status{
 		Strength,
@@ -19,7 +59,7 @@ public abstract class GameCharacter {
 	protected int HP = 5;
 	protected int MP = 5;
 
-	protected Type type = Type.None;
+	protected Type type;
 	protected StatusAilmen statusalimen = StatusAilmen.None;
 
 	public GameCharacter() {
@@ -80,9 +120,22 @@ public abstract class GameCharacter {
 		this.MP = statuslist[5];
 	}
 
+	protected Type getType() {
+		return this.type;
+	}
 
 	protected void setType(Type type_) {
 		this.type = type_;
+	}
+
+	protected void  setGameCharacterStatus(Type type, int str, int vit, int inte, int mind, int hp, int mp) {
+		this.strength = str;
+		this.vitality = vit;
+		this.intelligence = inte;
+		this.mind = mind;
+		this.HP = hp;
+		this.MP = mp;
+		this.type = type;
 	}
 
 

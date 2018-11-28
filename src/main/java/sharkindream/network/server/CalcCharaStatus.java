@@ -1,18 +1,19 @@
 package sharkindream.network.server;
 
 import sharkindream.gamecharacter.GameCharacter;
+import sharkindream.gamecharacter.GameCharacter.CharacterClass;
 import sharkindream.gamecharacter.GameCharacter.Status;
-import sharkindream.gamecharacter.minion.Minion;
-import sharkindream.gamecharacter.minion.MinionClass;
-import sharkindream.gamecharacter.minion.classtype.BeastTamer;
-import sharkindream.gamecharacter.minion.classtype.Bishop;
-import sharkindream.gamecharacter.minion.classtype.MadScientist;
-import sharkindream.gamecharacter.minion.classtype.None;
-import sharkindream.gamecharacter.minion.classtype.Prototype;
-import sharkindream.gamecharacter.minion.classtype.Sage;
-import sharkindream.gamecharacter.minion.classtype.Shielder;
-import sharkindream.gamecharacter.minion.classtype.Soldier;
-import sharkindream.gamecharacter.minion.classtype.Witch;
+import sharkindream.gamecharacter.Minion;
+import sharkindream.gamecharacter.classtype.BeastTamer;
+import sharkindream.gamecharacter.classtype.Bishop;
+import sharkindream.gamecharacter.classtype.MadScientist;
+import sharkindream.gamecharacter.classtype.None;
+import sharkindream.gamecharacter.classtype.Prototype;
+import sharkindream.gamecharacter.classtype.Sage;
+import sharkindream.gamecharacter.classtype.Shielder;
+import sharkindream.gamecharacter.classtype.Soldier;
+import sharkindream.gamecharacter.classtype.Witch;
+
 
 public class CalcCharaStatus {
 
@@ -130,7 +131,7 @@ public class CalcCharaStatus {
 
 
 
-	private float getstatus(MinionClass classtype, GameCharacter.Status status) {
+	private float getstatus(CharacterClass classtype, GameCharacter.Status status) {
 
 		Prototype chara = new None();
 		switch(classtype) {

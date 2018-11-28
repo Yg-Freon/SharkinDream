@@ -89,7 +89,6 @@ public class OnMoveScreenHandler implements OnMoveScreenIF{
 
 		 try {
 			gamescene = (AnchorPane)gamescenefxml.load();
-
 			cflow.setGameController(gamescenefxml.getController());
 			Platform.runLater( () -> Main.switchMainScreen(gamescene));
 

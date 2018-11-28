@@ -1,5 +1,6 @@
 package sharkindream.network.stream.playerstream;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import sharkindream.actioncard.ActionCard;
 import sharkindream.config.Setting;
 import sharkindream.network.event.OnUpdatePlayerHandler;
 
-public class PlayerStatus {
+public class PlayerStatus implements Serializable{
 
 	private boolean isloose = false;
 	private List<ActionCard> hand = new ArrayList<>();
@@ -34,7 +35,28 @@ public class PlayerStatus {
 		}
 	}
 
+	public ActionCard getHand(int index) {
+		return hand.get(index);
+	}
+
+	public PlayCharacter getPlayer() {
+		return this.player;
+	}
+
 	public boolean canaction() {
 		return !this.isloose;
 	}
+
+	public PlayCharacter getminion(int id) {
+		switch(id) {
+		case 0:
+			return this.miniones[0];
+		case 1:
+			return this.miniones[1];
+		default:
+			return this.miniones[0];
+		}
+	}
+
+
 }

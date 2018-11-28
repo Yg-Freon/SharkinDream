@@ -1,15 +1,15 @@
 package sharkindream.network.event;
 
 import java.util.EventListener;
-import java.util.List;
 import java.util.Map;
 
+import sharkindream.network.client.ClientGamePlayFlow.AttackAction;
 import sharkindream.network.stream.playerstream.Guest;
 import sharkindream.network.stream.playerstream.PlayerStatus;
 
 public interface OnUpdatePlayerIF extends EventListener{
 
-	void OnInitMemberStatus(List<PlayerStatus> playerlist);
+	void OnInitMemberStatus(Map<Guest, PlayerStatus> playerStatuslist);
 
 	void onAttackTurn(Guest id, PlayerStatus player);
 
@@ -18,6 +18,10 @@ public interface OnUpdatePlayerIF extends EventListener{
 	void onTurnEnd();
 
 	void onSwitchTurn();
+
+	void onAttackerActioned(AttackAction actionResult);
+
+	void onActionAttack(int attackCard, int attackMinion, Guest target);
 
 
 

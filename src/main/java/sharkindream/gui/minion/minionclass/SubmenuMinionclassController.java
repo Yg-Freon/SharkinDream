@@ -2,14 +2,14 @@ package sharkindream.gui.minion.minionclass;
 
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
-import sharkindream.gamecharacter.minion.MinionClass;
-import sharkindream.gamecharacter.minion.classtype.BeastTamer;
-import sharkindream.gamecharacter.minion.classtype.Bishop;
-import sharkindream.gamecharacter.minion.classtype.MadScientist;
-import sharkindream.gamecharacter.minion.classtype.Sage;
-import sharkindream.gamecharacter.minion.classtype.Shielder;
-import sharkindream.gamecharacter.minion.classtype.Soldier;
-import sharkindream.gamecharacter.minion.classtype.Witch;
+import sharkindream.gamecharacter.GameCharacter.CharacterClass;
+import sharkindream.gamecharacter.classtype.BeastTamer;
+import sharkindream.gamecharacter.classtype.Bishop;
+import sharkindream.gamecharacter.classtype.MadScientist;
+import sharkindream.gamecharacter.classtype.Sage;
+import sharkindream.gamecharacter.classtype.Shielder;
+import sharkindream.gamecharacter.classtype.Soldier;
+import sharkindream.gamecharacter.classtype.Witch;
 import sharkindream.gui.minion.CreateMinionController;
 
 public class SubmenuMinionclassController {
@@ -49,43 +49,43 @@ public class SubmenuMinionclassController {
 
 	@FXML
 	private void onClickSoldier() {
-		controller.updateminionclass(MinionClass.Soldier);
+		controller.updateminionclass(CharacterClass.Soldier);
 		controller.closesubmenu();
 	}
 
 	@FXML
 	private void onClickShielder() {
-		controller.updateminionclass(MinionClass.Shielder);
+		controller.updateminionclass(CharacterClass.Shielder);
 		controller.closesubmenu();
 	}
 
 	@FXML
 	private void onClickWitch() {
-		controller.updateminionclass(MinionClass.Witch);
+		controller.updateminionclass(CharacterClass.Witch);
 		controller.closesubmenu();
 	}
 
 	@FXML
 	private void onClickSage() {
-		controller.updateminionclass(MinionClass.Sage);
+		controller.updateminionclass(CharacterClass.Sage);
 		controller.closesubmenu();
 	}
 
 	@FXML
 	private void onClickBichop() {
-		controller.updateminionclass(MinionClass.Bishop);
+		controller.updateminionclass(CharacterClass.Bishop);
 		controller.closesubmenu();
 	}
 
 	@FXML
 	private void onClickMadscientist() {
-		controller.updateminionclass(MinionClass.MadScientist);
+		controller.updateminionclass(CharacterClass.MadScientist);
 		controller.closesubmenu();
 	}
 
 	@FXML
 	private void onClickBeastTamer() {
-		controller.updateminionclass(MinionClass.BeastTamer);
+		controller.updateminionclass(CharacterClass.BeastTamer);
 		controller.closesubmenu();
 	}
 }

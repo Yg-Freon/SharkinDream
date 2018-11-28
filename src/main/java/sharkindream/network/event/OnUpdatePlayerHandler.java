@@ -1,8 +1,8 @@
 package sharkindream.network.event;
 
-import java.util.List;
 import java.util.Map;
 
+import sharkindream.network.client.ClientGamePlayFlow.AttackAction;
 import sharkindream.network.server.GameFlow;
 import sharkindream.network.server.SrvThread;
 import sharkindream.network.stream.playerstream.Guest;
@@ -12,9 +12,9 @@ public class OnUpdatePlayerHandler implements OnUpdatePlayerIF{
 
 
 	@Override
-	public void OnInitMemberStatus(List<PlayerStatus> playerlist) {
+	public void OnInitMemberStatus(Map<Guest, PlayerStatus> playerStatuslist) {
 		for(SrvThread srvth: GameFlow.getClientMember()) {
-			srvth.sendPlayeresStatus(playerlist);
+			srvth.sendPlayeresStatus(playerStatuslist);
 		}
 	}
 
@@ -41,6 +41,13 @@ public class OnUpdatePlayerHandler implements OnUpdatePlayerIF{
 		//ターンの切り替わり
 	}
 
+	@Override
+	public void onAttackerActioned(AttackAction actionResult) {
+		GameFlow.setAttackedFlag(actionResult);
+	}
 
+	@Override
+	public void onActionAttack(int attackCard, int attackMinion, Guest target) {
 
+	}
 }

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.SVGPath?>
@@ -12,27 +19,246 @@
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <bottom>
-            <AnchorPane prefHeight="150.0" prefWidth="200.0" style="-fx-view-order: 2;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="155.0" prefWidth="200.0" style="-fx-view-order: 2;" BorderPane.alignment="CENTER">
                <children>
                   <Line endX="1100.0" stroke="#383838" strokeWidth="1.2" AnchorPane.topAnchor="0.0" />
+                  <TilePane alignment="CENTER" layoutX="701.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox fx:id="buttonlist" disable="true" prefHeight="100.0" prefWidth="400.0">
+                           <children>
+                              <AnchorPane onMouseClicked="#onClickAttack" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: #cdcdcd;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <AnchorPane fx:id="attackpane" disable="true" onMouseClicked="#onClickAttack" opacity="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ee6557;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Text disable="true" fill="#f4f4f4" layoutX="12.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attack" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="28.7431640625">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <Region disable="true" prefHeight="200.0" prefWidth="20.0" />
+                              <AnchorPane onMouseClicked="#onClickDraw" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: #cdcdcd;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <AnchorPane fx:id="drawpane" disable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f09613;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Text disable="true" fill="#f4f4f4" layoutX="23.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Draw" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="28.7431640625">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <Region disable="true" prefHeight="200.0" prefWidth="20.0" />
+                              <AnchorPane onMouseClicked="#onClickRest" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: #cdcdcd;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <AnchorPane fx:id="restpane" disable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #55a06d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Text disable="true" fill="#f4f4f4" layoutX="30.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rest" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="28.7431640625">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </TilePane>
+                  <AnchorPane fx:id="cardfieldpane" layoutX="70.0" layoutY="2.5" prefHeight="150.0" prefWidth="600.0">
+                     <children>
+                        <AnchorPane fx:id="card0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onClickCard" prefHeight="150.0" prefWidth="125.0">
+                           <children>
+                              <AnchorPane layoutX="-62.0" layoutY="-75.0" prefHeight="300.0" prefWidth="250.0" scaleX="0.5" scaleY="0.5" style="-fx-background-color: white;">
+                                 <children>
+                                    <AnchorPane layoutX="24.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <Label text="A" textFill="#ee6557" wrapText="true">
+                                             <font>
+                                                <Font size="42.0" />
+                                             </font>
+                                          </Label>
+                                          <Canvas height="30.0" width="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="174.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="63.0" AnchorPane.bottomAnchor="223.0" AnchorPane.rightAnchor="13.0">
+                                       <children>
+                                          <Text fx:id="bufftext" fill="#ee6557" layoutX="10.0" layoutY="10.0" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="0/0/0/1" textAlignment="RIGHT" translateX="-30.0" translateY="-20.0" wrappingWidth="100.0000074505806" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="accuracylucktext" fill="#ee6557" layoutX="10.0" layoutY="10.0" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="80/5" textAlignment="RIGHT" translateX="-30.0" translateY="-15.0" wrappingWidth="100.0000074505806" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                    <TilePane alignment="CENTER" layoutX="25.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="A" textFill="#ed6458" wrapText="true">
+                                             <font>
+                                                <Font size="100.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="card1" layoutX="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onClickCard" prefHeight="150.0" prefWidth="125.0">
+                           <children>
+                              <AnchorPane layoutX="-62.0" layoutY="-75.0" prefHeight="300.0" prefWidth="250.0" scaleX="0.5" scaleY="0.5" style="-fx-background-color: white;">
+                                 <children>
+                                    <AnchorPane layoutX="24.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <Label text="A" textFill="#ee6557" wrapText="true">
+                                             <font>
+                                                <Font size="42.0" />
+                                             </font>
+                                          </Label>
+                                          <Canvas height="30.0" width="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="174.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="63.0" AnchorPane.bottomAnchor="223.0" AnchorPane.rightAnchor="13.0">
+                                       <children>
+                                          <Text fx:id="bufftext1" fill="#ee6557" layoutX="10.0" layoutY="10.0" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="0/0/0/1" textAlignment="RIGHT" translateX="-30.0" translateY="-20.0" wrappingWidth="100.0000074505806" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="accuracylucktext1" fill="#ee6557" layoutX="10.0" layoutY="10.0" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="80/5" textAlignment="RIGHT" translateX="-30.0" translateY="-15.0" wrappingWidth="100.0000074505806" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                    <TilePane alignment="CENTER" layoutX="25.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="A" textFill="#ed6458" wrapText="true">
+                                             <font>
+                                                <Font size="100.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="card2" layoutX="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onClickCard" prefHeight="150.0" prefWidth="125.0">
+                           <children>
+                              <AnchorPane fx:id="infoscreen12" layoutX="-62.0" layoutY="-75.0" prefHeight="300.0" prefWidth="250.0" scaleX="0.5" scaleY="0.5" style="-fx-background-color: white;">
+                                 <children>
+                                    <AnchorPane layoutX="24.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <Label text="A" textFill="#ee6557" wrapText="true">
+                                             <font>
+                                                <Font size="42.0" />
+                                             </font>
+                                          </Label>
+                                          <Canvas height="30.0" width="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="174.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="63.0" AnchorPane.bottomAnchor="223.0" AnchorPane.rightAnchor="13.0">
+                                       <children>
+                                          <Text fx:id="bufftext2" fill="#ee6557" layoutX="10.0" layoutY="10.0" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="0/0/0/1" textAlignment="RIGHT" translateX="-30.0" translateY="-20.0" wrappingWidth="100.0000074505806" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="accuracylucktext2" fill="#ee6557" layoutX="10.0" layoutY="10.0" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="80/5" textAlignment="RIGHT" translateX="-30.0" translateY="-15.0" wrappingWidth="100.0000074505806" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                    <TilePane alignment="CENTER" layoutX="25.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="A" textFill="#ed6458" wrapText="true">
+                                             <font>
+                                                <Font size="100.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="card3" layoutX="455.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onClickCard" prefHeight="150.0" prefWidth="125.0" style="-fx-border-color: #383838;">
+                           <children>
+                              <AnchorPane fx:id="infoscreen121" layoutX="-62.0" layoutY="-75.0" opacity="0.0" prefHeight="300.0" prefWidth="250.0" scaleX="0.5" scaleY="0.5" style="-fx-background-color: white;">
+                                 <children>
+                                    <AnchorPane layoutX="24.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <Label text="A" textFill="#ee6557" wrapText="true">
+                                             <font>
+                                                <Font size="42.0" />
+                                             </font>
+                                          </Label>
+                                          <Canvas height="30.0" width="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="174.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="63.0" AnchorPane.bottomAnchor="223.0" AnchorPane.rightAnchor="13.0">
+                                       <children>
+                                          <Text fx:id="bufftext21" fill="#ee6557" layoutX="10.0" layoutY="10.0" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="0/0/0/1" textAlignment="RIGHT" translateX="-30.0" translateY="-20.0" wrappingWidth="100.0000074505806" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="accuracylucktext21" fill="#ee6557" layoutX="10.0" layoutY="10.0" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="80/5" textAlignment="RIGHT" translateX="-30.0" translateY="-15.0" wrappingWidth="100.0000074505806" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                    <TilePane alignment="CENTER" layoutX="25.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="A" textFill="#ed6458" wrapText="true">
+                                             <font>
+                                                <Font size="100.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
                </children></AnchorPane>
          </bottom>
-         <left>
-            <AnchorPane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
-         </left>
+
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-view-order: 2;" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane fx:id="infoscreen" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="570.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="432.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="infoscreen" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <AnchorPane fx:id="turninfoscreen" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="0.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text fx:id="attackturntext" fill="#383838" layoutX="142.0" layoutY="63.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Turn!!" AnchorPane.bottomAnchor="29.10498046875">
+                                 <font>
+                                    <Font size="37.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
                   <AnchorPane fx:id="animationpane" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.rightAnchor="50.0">
                      <children>
-                        <Circle fill="#1f93ff00" radius="450.0" scaleX="-1.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
+                        <Circle disable="true" fill="#1f93ff00" mouseTransparent="true" radius="450.0" scaleX="-1.0" stroke="#383838" strokeType="OUTSIDE" strokeWidth="1.2" />
                         <AnchorPane fx:id="playerboxaxis" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                            <children>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                              <AnchorPane fx:id="player0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" translateX="-370.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" mouseTransparent="true" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" translateX="-370.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -49,10 +275,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-32.72">
+                              <AnchorPane fx:id="player1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-32.72">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" mouseTransparent="true" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -69,10 +296,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-65.44">
+                              <AnchorPane fx:id="player2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-65.44">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -89,10 +317,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-98.16">
+                              <AnchorPane fx:id="player3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-98.16">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -109,10 +338,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-130.88">
+                              <AnchorPane fx:id="player4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-130.88">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -129,10 +359,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-163.6">
+                              <AnchorPane fx:id="player5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="-163.6">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -149,10 +380,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="163.6">
+                              <AnchorPane fx:id="player6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="163.6">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -169,10 +401,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="130.88">
+                              <AnchorPane fx:id="player7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="130.88">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -189,10 +422,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="98.16">
+                              <AnchorPane fx:id="player8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="98.16">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -209,10 +443,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="65.44">
+                              <AnchorPane fx:id="player9" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="65.44">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -229,10 +464,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="32.72">
+                              <AnchorPane fx:id="player10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" rotate="32.72">
                                  <children>
-                                    <SVGPath content="M 0,0 L -432,-124 A 450 450 1 0 0 -432 124 z" fill="#cdcdcd" stroke="#36363600" strokeWidth="1.2" />
-                                    <AnchorPane layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                    <Arc fill="#cdcdcd" length="32.5" onMouseClicked="#onClickPlayerStatus" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <Arc disable="true" fill="#cdcdcd" length="32.5" radiusX="450.0" radiusY="450.0" startAngle="163.75" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                    <AnchorPane disable="true" layoutX="-370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
                                        <children>
                                           <Circle fill="#f4f4f4" radius="50.0" stroke="#383838" strokeType="INSIDE" strokeWidth="1.2" />
                                           <Text fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="N" x="-23.0" y="23.0">
@@ -267,6 +503,116 @@
                </children>
             </AnchorPane>
          </center>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="100.0" style="-fx-view-order: -1; -fx-background-color: #f4f4f4;" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endY="545.0" AnchorPane.rightAnchor="0.0" />
+                  <AnchorPane layoutX="-61.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Line endX="-24.6029052734375" layoutX="52.0" layoutY="37.0" startX="20.3970947265625" />
+                        <Line endX="-24.6029052734375" layoutX="52.0" layoutY="50.0" startX="20.3970947265625" />
+                        <Line endX="-24.6029052734375" layoutX="52.0" layoutY="61.0" startX="20.3970947265625" />
+                     </children></AnchorPane>
+                  <VBox fx:id="partymenberlist" minWidth="-Infinity" prefHeight="375.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                     <children>
+                        <AnchorPane fx:id="playerpane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="125.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" AnchorPane.topAnchor="12.5">
+                                 <children>
+                                    <SVGPath content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#cdcdcd" layoutX="-50.0" onMouseClicked="#onClickPartyMenber" rotate="180.0" scaleX="0.48" scaleY="0.4" strokeType="OUTSIDE" strokeWidth="1.2" translateY="-50.0" />
+                                    <TilePane alignment="CENTER" disable="true" layoutX="50.0" layoutY="45.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Text disable="true" fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="400">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="playerHPpane" disable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" AnchorPane.topAnchor="12.5">
+                                 <children>
+                                    <SVGPath content="M 100.81 8.70 C 103.68 9.40 106.32 11.59 108.68 13.29 C 132.09 31.64 156.12 49.18 179.74 67.25 C 184.91 71.65 193.68 74.83 193.06 82.93 C 192.90 119.61 193.14 156.32 192.91 192.91 C 131.31 193.06 69.69 193.06 8.09 192.91 C 7.77 157.27 8.26 121.61 7.83 85.97 C 7.93 83.27 7.88 80.19 8.91 77.65 C 10.35 75.10 13.19 73.20 15.47 71.43 C 23.79 65.45 32.01 59.35 40.11 53.08 C 57.56 39.46 75.71 26.74 92.90 12.86 C 95.13 11.31 98.02 8.78 100.81 8.70 Z" fill="#ee6557" layoutX="-50.0" onMouseClicked="#onClickPartyMenber" rotate="180.0" scaleX="0.48" scaleY="0.4" translateY="-50.0" />
+                                    <TilePane alignment="CENTER" layoutX="50.0" layoutY="45.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Text disable="true" fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="400">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="minion0pane" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="100.0" prefWidth="100.0" AnchorPane.topAnchor="12.5">
+                                 <children>
+                                    <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#cdcdcd" layoutX="-3.0" layoutY="-6.0" onMouseClicked="#onClickPartyMenber" rotate="90.0" stroke="WHITE" strokeWidth="0.0" />
+                                    <TilePane alignment="CENTER" disable="true" layoutX="50.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Text disable="true" fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="400">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="minion0HPpane" disable="true" prefHeight="100.0" prefWidth="100.0" AnchorPane.topAnchor="12.5">
+                                 <children>
+                                    <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#f09613" layoutX="-3.0" layoutY="-6.0" onMouseClicked="#onClickPartyMenber" rotate="90.0" stroke="WHITE" strokeWidth="0.0" />
+                                    <TilePane alignment="CENTER" layoutX="50.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Text disable="true" fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="400">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="minion1pane" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="100.0" prefWidth="100.0" AnchorPane.topAnchor="12.5">
+                                 <children>
+                                    <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#cdcdcd" layoutX="-3.0" layoutY="-6.0" onMouseClicked="#onClickPartyMenber" rotate="90.0" stroke="WHITE" strokeWidth="0.0" />
+                                    <TilePane alignment="CENTER" disable="true" layoutX="50.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Text disable="true" fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="400">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="minion1HPpane" disable="true" prefHeight="100.0" prefWidth="100.0" AnchorPane.topAnchor="12.5">
+                                 <children>
+                                    <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#5b7ccc" layoutX="-3.0" layoutY="-6.0" onMouseClicked="#onClickPartyMenber" rotate="90.0" stroke="WHITE" strokeWidth="0.0" />
+                                    <TilePane alignment="CENTER" layoutX="50.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                                       <children>
+                                          <Text disable="true" fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="400">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </TilePane>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </left>
       </BorderPane>
    </children>
 </AnchorPane>

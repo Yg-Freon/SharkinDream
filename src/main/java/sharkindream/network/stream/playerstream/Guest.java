@@ -3,8 +3,8 @@ package sharkindream.network.stream.playerstream;
 import java.io.Serializable;
 
 import sharkindream.deck.Deck;
+import sharkindream.gamecharacter.Minion;
 import sharkindream.gamecharacter.Type;
-import sharkindream.gamecharacter.minion.Minion;
 import sharkindream.party.Party;
 
 public class Guest implements Serializable{

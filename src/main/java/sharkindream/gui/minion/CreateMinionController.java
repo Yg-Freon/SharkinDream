@@ -21,9 +21,9 @@ import javafx.scene.shape.SVGPath;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import sharkindream.config.Setting;
+import sharkindream.gamecharacter.GameCharacter.CharacterClass;
+import sharkindream.gamecharacter.Minion;
 import sharkindream.gamecharacter.Type;
-import sharkindream.gamecharacter.minion.Minion;
-import sharkindream.gamecharacter.minion.MinionClass;
 import sharkindream.gui.event.OnMoveScreenHandler;
 import sharkindream.gui.minion.minionclass.SubmenuMinionclassController;
 import sharkindream.gui.minion.type.SubmenuTypeMinionController;
@@ -94,6 +94,7 @@ public class CreateMinionController {
 
 	@FXML
 	private void returnMainmenu() {
+		minion.saveMiniontoJson();
 		onClickedReturnMenu();
 	}
 
@@ -358,7 +359,7 @@ public class CreateMinionController {
 		 minion.setMinionType(type);
 	 }
 
-	 public void updateminionclass(MinionClass minionclass) {
+	 public void updateminionclass(CharacterClass minionclass) {
 		 minion.setMinionClass(minionclass);
 		 updateUIInfo();
 	 }

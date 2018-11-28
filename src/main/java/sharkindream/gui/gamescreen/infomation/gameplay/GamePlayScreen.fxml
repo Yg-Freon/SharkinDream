@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.SVGPath?>
 
-
-<AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="infoscreen" prefHeight="540.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharkindream.gui.gamescreen.infomation.gameplay.GamePlayScreenController">
    <children>
-      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TilePane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <AnchorPane prefHeight="540.0" prefWidth="570.0">
                <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                  <AnchorPane maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" />
+                  <AnchorPane layoutX="30.0" layoutY="43.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+                     <children>
+                        <SVGPath fx:id="fpath" content="M 0 0 A 250 100 0 0 1 80 190" fill="TRANSPARENT" layoutX="24.0" layoutY="-100.0" stroke="BLACK" visible="false" />
+                        <SVGPath fx:id="tpath" content="M 80 190 A 250 100 0 0 1 -170 180" fill="TRANSPARENT" layoutX="24.0" layoutY="-100.0" stroke="BLACK" visible="false" />
+                        <SVGPath fx:id="ellpath" content="M 0 0 A 250 100 0 1 1 -170 180" fill="TRANSPARENT" layoutX="19.0" layoutY="-100.0" stroke="BLACK" />
+                        <AnchorPane fx:id="statuspane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" />
+                     </children>
+                  </AnchorPane>
                </children>
-            </HBox>
-            <HBox fillHeight="false" maxHeight="-Infinity" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-               </children>
-            </HBox>
+            </AnchorPane>
          </children>
-      </VBox>
+      </TilePane>
    </children>
 </AnchorPane>

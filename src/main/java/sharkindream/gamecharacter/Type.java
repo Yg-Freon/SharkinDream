@@ -5,7 +5,7 @@ public enum Type {
 	None(0, "None", "#514f4f"),
 	Fire(1, "Fire", "#ee6557"),
 	Water(2, "Water", "#5b7ccc"),
-	Leaf(3, "Leaf", "#5bcc80"),
+	Leaf(3, "Leaf", "#55a06d"),
 	Light(4, "Light", "#f09613"),
 	Dark(5, "Dark", "#150821");
 

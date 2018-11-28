@@ -1,10 +1,12 @@
 package sharkindream.network.stream.playerstream;
 
+import java.io.Serializable;
+
+import sharkindream.gamecharacter.GameCharacter.CharacterClass;
 import sharkindream.gamecharacter.StatusAilmen;
 import sharkindream.gamecharacter.Type;
-import sharkindream.gamecharacter.minion.MinionClass;
 
-public class PlayCharacter {
+public class PlayCharacter implements Serializable{
 
 	/*操作主*/
 	private int id;
@@ -15,7 +17,7 @@ public class PlayCharacter {
 	private Type type;
 
 	/*キャラクタークラス*/
-	private MinionClass characterclass;
+	private CharacterClass characterclass;
 
 	/*ステータス実数値*/
 	private int[] status = new int[6];
@@ -28,6 +30,8 @@ public class PlayCharacter {
 
 	/*死亡*/
 	private boolean isdead = false;
+
+	private int HP;
 
 
 
@@ -48,20 +52,43 @@ public class PlayCharacter {
 		this.status = status_;
 	}
 
-	public MinionClass getCharacterclass() {
-		return characterclass;
+	public void  initHP() {
+		this.HP = this.status[5];
 	}
 
-	public void setCharacterclass(MinionClass characterclass) {
-		this.characterclass = characterclass;
+	public int getHP() {
+		return this.HP;
 	}
 
+	public int getMaxHP() {
+		return this.status[5];
+	}
 
 	public void addDamege(int damage){
-		this.status[5] -= damage;
+		this.HP -= damage;
+		if(this.HP > this.status[5]) {
+			this.HP = this.status[5];
+		}
+
 		if(this.status[5] < 1) {
 			this.isdead = true;
 		}
+	}
+
+	public void setType(Type type_) {
+		this.type = type_;
+	}
+
+	public Type getType() {
+		return this.type;
+	}
+
+	public void setCharacterClass(CharacterClass characlass) {
+		this.characterclass = characlass;
+	}
+
+	public CharacterClass getCharacterClass() {
+		return this.characterclass;
 	}
 
 

@@ -66,7 +66,7 @@
             </AnchorPane>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#5bcc80" onMouseClicked="#onMouseClicked" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
+                  <SVGPath content="M 33.95 20.92 C 46.32 20.95 58.68 20.93 71.05 20.93 C 72.88 21.11 74.50 20.62 75.26 22.72 C 80.29 33.04 85.20 43.45 90.16 53.81 C 91.32 55.82 89.93 57.34 89.20 59.21 C 84.42 68.82 80.00 78.62 75.22 88.22 C 74.26 90.88 71.20 89.76 69.02 90.03 C 56.17 89.79 43.24 90.35 30.41 89.76 C 25.08 78.98 19.93 68.10 14.78 57.24 C 13.60 55.06 14.85 53.65 15.66 51.66 C 20.36 42.01 24.93 32.28 29.62 22.63 C 30.35 20.51 32.14 21.16 33.95 20.92 Z" fill="#55a06d" onMouseClicked="#onMouseClicked" rotate="90.0" scaleX="2.0" scaleY="2.0" stroke="WHITE" strokeWidth="0.0" />
                   <Text disable="true" fill="WHITE" layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Int">
                      <font>
                         <Font size="50.0" />

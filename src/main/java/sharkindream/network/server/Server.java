@@ -5,7 +5,6 @@ import java.net.ServerSocket;
 
 import javafx.concurrent.Task;
 import sharkindream.network.event.OnRunServerHandler;
-import sharkindream.network.event.OnUpdateGuestHandler;
 import sharkindream.network.event.OnUpdatePlayerHandler;
 
 public class Server extends Task<Object>{
@@ -33,7 +32,6 @@ public class Server extends Task<Object>{
 
 			GameFlow gameflow = new GameFlow();
 
-			GameFlow.setUpdateHandler(new OnUpdateGuestHandler());
 			gameflow.addUpdatePlayerHandler(new OnUpdatePlayerHandler());
 
 			//ロビーメニュー
@@ -43,14 +41,12 @@ public class Server extends Task<Object>{
 			//ステータス割り振り
 			gameflow.gameInit();
 			//手札配布
-			gameflow.inithand();
 
 			//ゲームスタート
 			boolean roopflag = true;
 			while(roopflag) {
 				roopflag = gameflow.playGame();
 			}
-
 			//終わり
 
 		}catch(Exception e) {
@@ -64,7 +60,6 @@ public class Server extends Task<Object>{
 				if(sSocket!=null) {
 					sSocket.close();
 				}
-
 				System.out.println("サーバー側終了です");
 			}catch(IOException e) {
 				e.printStackTrace();
